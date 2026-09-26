@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>Localization</AssemblyName>
+    <RootNamespace>Combolands.Localization</RootNamespace>
+    <Version>0.3.0</Version>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <CombolandsManagedDir Condition="'$(CombolandsManagedDir)' == ''">$(COMBOLANDS_MANAGED_DIR)</CombolandsManagedDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Core" Version="5.4.21" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp" HintPath="$(CombolandsManagedDir)/Assembly-CSharp.dll" Private="false" />
+    <Reference Include="Unity.TextMeshPro" HintPath="$(CombolandsManagedDir)/Unity.TextMeshPro.dll" Private="false" />
+    <Reference Include="UnityEngine" HintPath="$(CombolandsManagedDir)/UnityEngine.dll" Private="false" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="$(CombolandsManagedDir)/UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="UnityEngine.TextRenderingModule" HintPath="$(CombolandsManagedDir)/UnityEngine.TextRenderingModule.dll" Private="false" />
+    <Reference Include="UnityEngine.TextCoreFontEngineModule" HintPath="$(CombolandsManagedDir)/UnityEngine.TextCoreFontEngineModule.dll" Private="false" />
+    <Reference Include="UnityEngine.TextCoreTextEngineModule" HintPath="$(CombolandsManagedDir)/UnityEngine.TextCoreTextEngineModule.dll" Private="false" />
+    <Reference Include="UnityEngine.UI" HintPath="$(CombolandsManagedDir)/UnityEngine.UI.dll" Private="false" />
+    <Reference Include="UnityEngine.UIModule" HintPath="$(CombolandsManagedDir)/UnityEngine.UIModule.dll" Private="false" />
+    <Reference Include="Sirenix.Serialization" HintPath="$(CombolandsManagedDir)/Sirenix.Serialization.dll" Private="false" />
+    <Reference Include="Sirenix.Utilities" HintPath="$(CombolandsManagedDir)/Sirenix.Utilities.dll" Private="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../../localization/zh-Hant.json" Link="zh-Hant.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <RequiredGameReference Include="$(CombolandsManagedDir)/Assembly-CSharp.dll" />
+    <RequiredGameReference Include="$(CombolandsManagedDir)/Unity.TextMeshPro.dll" />
+    <RequiredGameReference Include="$(CombolandsManagedDir)/UnityEngine.dll" />
+    <RequiredGameReference Include="$(CombolandsManagedDir)/UnityEngine.CoreModule.dll" />
+    <RequiredGameReference Include="$(CombolandsManagedDir)/UnityEngine.TextRenderingModule.dll" />
+    <RequiredGameReference Include="$(CombolandsManagedDir)/UnityEngine.TextCoreFontEngineModule.dll" />
+    <RequiredGameReference Include="$(CombolandsManagedDir)/UnityEngine.TextCoreTextEngineModule.dll" />
+    <RequiredGameReference Include="$(CombolandsManagedDir)/UnityEngine.UI.dll" />
+    <RequiredGameReference Include="$(CombolandsManagedDir)/UnityEngine.UIModule.dll" />
+    <RequiredGameReference Include="$(CombolandsManagedDir)/Sirenix.Serialization.dll" />
+    <RequiredGameReference Include="$(CombolandsManagedDir)/Sirenix.Utilities.dll" />
+  </ItemGroup>
+
+  <Target Name="ValidateCombolandsManagedDir" BeforeTargets="ResolveAssemblyReferences" Condition="'$(DesignTimeBuild)' != 'true'">
+    <Error Condition="'$(CombolandsManagedDir)' == ''"
+           Text="CombolandsManagedDir is required. Set -p:CombolandsManagedDir=... or COMBOLANDS_MANAGED_DIR to the game's Combolands_Data/Managed directory." />
+    <Error Condition="!Exists('%(RequiredGameReference.Identity)')"
+           Text="Missing compile reference: %(RequiredGameReference.Identity)" />
+  </Target>
+</Project>

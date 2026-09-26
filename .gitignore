@@ -1,0 +1,23 @@
+# Build outputs
+**/bin/
+**/obj/
+dist/
+
+# IDE/editor state
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+
+# Never commit game/runtime binaries or packaged outputs
+*.dll
+*.exe
+*.pdb
+*.zip
+*.so
+*.dylib
+
+# OS noise
+.DS_Store
+Thumbs.db

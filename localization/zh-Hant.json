@@ -1,0 +1,4321 @@
+{
+  "locale": "zh-Hant",
+  "entries": [
+    {
+      "key": "Abacus.Description",
+      "text": "每當建築或傳家寶賺取[Gold]時，獲得[CategoryScoreLuxury]，地圖上的每個[Luxury]各一份"
+    },
+    {
+      "key": "Abacus.Name",
+      "text": "天藍鑽石"
+    },
+    {
+      "key": "AddRandomBuildingSupplies.Description",
+      "text": "獲得最多2個隨機[BuildingUpgrade]（必須有空間）"
+    },
+    {
+      "key": "AddRandomBuildingSupplies.Name",
+      "text": "石匠釀造物"
+    },
+    {
+      "key": "AddRandomHeirloom.Description",
+      "text": "獲得1個隨機[Heirloom]（必須有空間）"
+    },
+    {
+      "key": "AddRandomHeirloom.Name",
+      "text": "財富靈藥"
+    },
+    {
+      "key": "AddRandomVotes.Description",
+      "text": "獲得最多2張隨機[CouncilVote]（必須有空間）"
+    },
+    {
+      "key": "AddRandomVotes.Name",
+      "text": "瓶中賄賂"
+    },
+    {
+      "key": "Alembic.Description",
+      "text": "每當你會獲得[Gold]，來源為[Heirloom]或建築時，改為給予隨機[TargetCategory1]一半數量的[Mult]"
+    },
+    {
+      "key": "Alembic.Name",
+      "text": "蒸餾器"
+    },
+    {
+      "key": "Altar.Description",
+      "text": "當[Common]在[InRange]的[Sacred]建築旁生成時，有[PercentageChance]機率獲得[MoneyCount] "
+    },
+    {
+      "key": "Altar.Name",
+      "text": "祭壇"
+    },
+    {
+      "key": "AnimalFeedBag.Description",
+      "text": "每當[Crop]轉化時，使與其[Adjacent]的[Husbandry]獲得[MultParam]"
+    },
+    {
+      "key": "AnimalFeedBag.Name",
+      "text": "穀物麥片"
+    },
+    {
+      "key": "Apiary.Description",
+      "text": "{每[Cooldown]週觸發一次：} @[TagScoreFlowers]，地圖上每個[Flowers] [InRange]"
+    },
+    {
+      "key": "Apiary.Name",
+      "text": "養蜂場"
+    },
+    {
+      "key": "Apothecary.Description",
+      "text": "{每[Cooldown]週觸發一次：} @生成[ActivationCount]個[Herbs]在隨機[Adjacent]格子上 [BREAK]{被動：} [Nature] [InRange]會被視為[Healing]，移除時給予[MoneyCount]"
+    },
+    {
+      "key": "Apothecary.Name",
+      "text": "藥草師"
+    },
+    {
+      "key": "AppleOrchard.Description",
+      "text": "{在[Cooldown]週內生長（轉化）}，接著{觸發：} [BaseScore] [BREAK]{被動：}擁有[MultParam]，若與[Adjacent]的[Apiary]相鄰"
+    },
+    {
+      "key": "AppleOrchard.Name",
+      "text": "果園"
+    },
+    {
+      "key": "Arbalest.Description",
+      "text": "每當[Ballista]觸發時，旋轉並指向額外目標"
+    },
+    {
+      "key": "Arbalest.Name",
+      "text": "弩炮"
+    },
+    {
+      "key": "ArcheryRange.Description",
+      "text": "{每[Cooldown]週觸發一次：} @[CategoryScoreHusbandry]，每個[Husbandry]或[Woodworking] [InRange]"
+    },
+    {
+      "key": "ArcheryRange.Name",
+      "text": "射箭場"
+    },
+    {
+      "key": "ArchitecturalCodes.Description",
+      "text": "接下來的[Cooldown]個[Civic]建築不受[Range]放置限制"
+    },
+    {
+      "key": "ArchitecturalCodes.Name",
+      "text": "建築法規"
+    },
+    {
+      "key": "ArchmageStaff.Description",
+      "text": "{每[Cooldown]週：} {觸發}地圖上所有與你持有的[Blueprint]相對應的建築"
+    },
+    {
+      "key": "ArchmageStaff.Name",
+      "text": "大法師之杖"
+    },
+    {
+      "key": "Arsenal.Description",
+      "text": "{每[Cooldown]週觸發一次：} [RemoveCount] [BREAK]只能在[Adjacent]於[Fortification]的位置生成"
+    },
+    {
+      "key": "Arsenal.Name",
+      "text": "兵工廠"
+    },
+    {
+      "key": "Axe.Description",
+      "text": "[Woodcutter]和[Forester]會影響額外目標"
+    },
+    {
+      "key": "Axe.Name",
+      "text": "伐木斧"
+    },
+    {
+      "key": "BaitHook.Description",
+      "text": "每當[Nature]在[Fisher]的[InRange]內生成時，給予該[Fisher][MultParam]"
+    },
+    {
+      "key": "BaitHook.Name",
+      "text": "誘餌魚鉤"
+    },
+    {
+      "key": "Ballista.Description",
+      "text": "{每[Cooldown]週觸發一次：} @旋轉至隨機方向，並{觸發}其面向的格子"
+    },
+    {
+      "key": "Ballista.Name",
+      "text": "弩砲"
+    },
+    {
+      "key": "Balloon.Description",
+      "text": "{被動：}其他[InRange]內的建築會被視為[Luxury]"
+    },
+    {
+      "key": "Balloon.Name",
+      "text": "氣球商人"
+    },
+    {
+      "key": "BanditCamp.Description",
+      "text": "{每[Cooldown]週觸發一次：} @{觸發} [ActivationCount]個隨機[Adjacent]格子 [BREAK]若建築以此方式被觸發，則給予[BaseScore]"
+    },
+    {
+      "key": "BanditCamp.Name",
+      "text": "強盜營地"
+    },
+    {
+      "key": "Bank.Description",
+      "text": "{當[InRange]內的建築獲得[Reroll]或[Remove]時觸發：} @獲得[MoneyCount]"
+    },
+    {
+      "key": "Bank.Name",
+      "text": "銀行"
+    },
+    {
+      "key": "Banner.Description",
+      "text": "{移除時觸發：} @給予每個[Adjacent]建築[MultParam]"
+    },
+    {
+      "key": "Banner.Name",
+      "text": "旗幟"
+    },
+    {
+      "key": "Barn.Description",
+      "text": "{每[Cooldown]週觸發一次：} @[CategoryScoreHusbandry]，每個[Husbandry] [InRange]"
+    },
+    {
+      "key": "Barn.Name",
+      "text": "牧場"
+    },
+    {
+      "key": "Barracks.Description",
+      "text": "{每[Cooldown]週觸發一次：} @[TagScoreRocks]，每個[Rocks] [InRange]"
+    },
+    {
+      "key": "Barracks.Name",
+      "text": "兵營"
+    },
+    {
+      "key": "Bedroll.Description",
+      "text": "任何位於[Barn]的[InRange]內的建築都會被視為[Residence]"
+    },
+    {
+      "key": "Bedroll.Name",
+      "text": "睡袋"
+    },
+    {
+      "key": "BerryBush.Description",
+      "text": "被[BerryPicker]觸發時，{轉化}為[BerryBushEmpty]"
+    },
+    {
+      "key": "BerryBush.Name",
+      "text": "莓果灌木"
+    },
+    {
+      "key": "BerryBushEmpty.Description",
+      "text": "{在[Cooldown]週後生長（轉化）}"
+    },
+    {
+      "key": "BerryBushEmpty.Name",
+      "text": "空灌木"
+    },
+    {
+      "key": "BerryPicker.Description",
+      "text": "{任何[BerryBush]位於[InRange]內時觸發：} @[TagScoreBerryBush]，每個[BerryBush] [InRange]，並將每個{轉化}為[BerryBushEmpty]"
+    },
+    {
+      "key": "BerryPicker.Name",
+      "text": "採集者小屋"
+    },
+    {
+      "key": "Blacksmith.Description",
+      "text": "{每[Cooldown]週觸發一次： @[CategoryScoreManufacturer]，每個[Manufacturer]或[Training] [InRange] [BREAK]{被動：}移除[Adjacent]的[Ore]，使最大冷卻時間降低[CooldownModificationParam]"
+    },
+    {
+      "key": "Blacksmith.Name",
+      "text": "鐵匠鋪"
+    },
+    {
+      "key": "BluePaint.Description",
+      "text": "接下來[Cooldown]週，目標建築獲得：{每次觸發時，獲得[DismissCount]} [BREAK]建築同時只能有1種油漆"
+    },
+    {
+      "key": "BluePaint.Name",
+      "text": "藍漆"
+    },
+    {
+      "key": "Bonsai.Description",
+      "text": "建築會被動地獲得[MultParam]，每個[Adjacent][Rocks]各提供一份"
+    },
+    {
+      "key": "Bonsai.Name",
+      "text": "盆栽"
+    },
+    {
+      "key": "BookAgri.Description",
+      "text": "[Agricultural]建築被動擁有[MultParam]"
+    },
+    {
+      "key": "BookAgri.Name",
+      "text": "農業之書"
+    },
+    {
+      "key": "BookCivic.Description",
+      "text": "[Civic]建築被動擁有[MultParam]"
+    },
+    {
+      "key": "BookCivic.Name",
+      "text": "民政之書"
+    },
+    {
+      "key": "BookCommercial.Description",
+      "text": "[Commercial]建築被動擁有[MultParam]"
+    },
+    {
+      "key": "BookCommercial.Name",
+      "text": "商業之書"
+    },
+    {
+      "key": "BookFrontier.Description",
+      "text": "[Frontier]建築被動擁有[MultParam]"
+    },
+    {
+      "key": "BookFrontier.Name",
+      "text": "邊疆之書"
+    },
+    {
+      "key": "BookIndustrial.Description",
+      "text": "[Industrial]建築被動擁有[MultParam]"
+    },
+    {
+      "key": "BookIndustrial.Name",
+      "text": "工業之書"
+    },
+    {
+      "key": "BookMarine.Description",
+      "text": "[Marine]建築被動擁有[MultParam]"
+    },
+    {
+      "key": "BookMarine.Name",
+      "text": "海事之書"
+    },
+    {
+      "key": "BookMartial.Description",
+      "text": "[Martial]建築被動擁有[MultParam]"
+    },
+    {
+      "key": "BookMartial.Name",
+      "text": "武藝之書"
+    },
+    {
+      "key": "BookOfTheSevenGuilds.Description",
+      "text": "{每[Cooldown]週：}獲得[BsRainbowPaint] @被動：[Wild]擁有[MultParam]"
+    },
+    {
+      "key": "BookOfTheSevenGuilds.Name",
+      "text": "七公會之書"
+    },
+    {
+      "key": "BookUncommon.Description",
+      "text": "[Uncommon]建築被動擁有[MultParam]"
+    },
+    {
+      "key": "BookUncommon.Name",
+      "text": "奇異之書"
+    },
+    {
+      "key": "Bookshelf.Description",
+      "text": "最多可容納8個[Tome] @[Tome]位於[Bookshelf]內時，額外給予[MultParam] @若滿載時售出，獲得特殊的[Legendary][Heirloom] [BREAK]不可複製"
+    },
+    {
+      "key": "Bookshelf.Name",
+      "text": "書架"
+    },
+    {
+      "key": "Bouquet.Description",
+      "text": "[SunflowerFarm]和[Apiary]不受[Range]放置限制"
+    },
+    {
+      "key": "Bouquet.Name",
+      "text": "花束"
+    },
+    {
+      "key": "Brewery.Description",
+      "text": "{當[InRange]內的建築轉化時觸發：} @[PercentageChance]機率{觸發} [ActivationCount]個隨機[Adjacent]建築"
+    },
+    {
+      "key": "Brewery.Name",
+      "text": "釀酒廠"
+    },
+    {
+      "key": "BrokenClock.Description",
+      "text": "每當你跳過建築時，給予地圖上與跳過建築相對應的建築[MultParam]"
+    },
+    {
+      "key": "BrokenClock.Name",
+      "text": "壞掉的懷錶"
+    },
+    {
+      "key": "BuildersLadder.Description",
+      "text": "每當你使用[BuildingUpgrade]時，也給予目標建築[MultParam]"
+    },
+    {
+      "key": "BuildersLadder.Name",
+      "text": "建築師梯"
+    },
+    {
+      "key": "Building.Display.Adjacency",
+      "text": "相鄰關係"
+    },
+    {
+      "key": "Building.Display.Adjacent",
+      "text": "相鄰"
+    },
+    {
+      "key": "Building.Display.Connected",
+      "text": "連接"
+    },
+    {
+      "key": "Building.Display.Cooldown",
+      "text": "冷卻"
+    },
+    {
+      "key": "Building.Display.Enchantment",
+      "text": "附魔"
+    },
+    {
+      "key": "Building.Display.InRange",
+      "text": "範圍內"
+    },
+    {
+      "key": "Building.Display.Multiplier",
+      "text": "倍率"
+    },
+    {
+      "key": "Building.Display.Range",
+      "text": "範圍"
+    },
+    {
+      "key": "Building.Display.TargetCount",
+      "text": "目標數量"
+    },
+    {
+      "key": "BuildingPlacement.CountRemaining",
+      "text": "剩餘{0}個可放置"
+    },
+    {
+      "key": "BuildingPlacement.InRangeOfError",
+      "text": "範圍內已有其他{0}"
+    },
+    {
+      "key": "BuildingPlacement.TooCloseToError",
+      "text": "離{0}太近"
+    },
+    {
+      "key": "BuildingSupplies.Description",
+      "text": "售出時，獲得[BsStatModMult]、[BsStatModCooldown]和[BsStatModRange]（必須有空間） [BREAK]售價為0[Gold]"
+    },
+    {
+      "key": "BuildingSupplies.Name",
+      "text": "建築物資"
+    },
+    {
+      "key": "Calipers.Description",
+      "text": "在未與任何其他建築[Adjacent]的情況下生成的建築會獲得[MultParam]"
+    },
+    {
+      "key": "Calipers.Name",
+      "text": "游標卡尺"
+    },
+    {
+      "key": "Campfire.Description",
+      "text": "{被動：}提供[MultParam]給所有[Adjacent]建築 [BREAK]{在[Cooldown]週後：}轉化為[CampfireDepleted]"
+    },
+    {
+      "key": "Campfire.Name",
+      "text": "營火"
+    },
+    {
+      "key": "CampfireDepleted.Description",
+      "text": "沒有作用 @{觸發時：} 會變為 [Campfire]"
+    },
+    {
+      "key": "CampfireDepleted.Name",
+      "text": "灰燼"
+    },
+    {
+      "key": "CanChooseToCompleteEarlyUnlockData.Description",
+      "text": "現在達成目標後，你可以選擇是否完成里程碑"
+    },
+    {
+      "key": "CanPlaceNextBuildingAnywhere.Description",
+      "text": "你放置的下一個建築可以放置在 {ANYWHERE} @如果放置於另一個建築上，不會觸發移除效果"
+    },
+    {
+      "key": "CanPlaceNextBuildingAnywhere.Name",
+      "text": "維度藥劑"
+    },
+    {
+      "key": "Canal.Description",
+      "text": "{被動：} 算作 [Ocean] @可以建造在其上"
+    },
+    {
+      "key": "Canal.Name",
+      "text": "運河"
+    },
+    {
+      "key": "CaptainsHat.Description",
+      "text": "[Ship] 被動擁有 [MultParam]"
+    },
+    {
+      "key": "CaptainsHat.Name",
+      "text": "船長帽"
+    },
+    {
+      "key": "Carpenter.Description",
+      "text": "{每 [Cooldown] 週觸發：} @[CategoryScoreWoodworking]，每個 [Woodworking] 或 [Ship] [InRange] [BREAK]{被動：}移除 [Adjacent] [Lumber] 以獲得 [RangeModificationParam] [Range]"
+    },
+    {
+      "key": "Carpenter.Name",
+      "text": "木匠"
+    },
+    {
+      "key": "Category.Agricultural.Desc",
+      "text": "[Agricultural]公會專注於種植和收穫[Crop]、[Farm]及動物[Husbandry]"
+    },
+    {
+      "key": "Category.Agricultural.Name",
+      "text": "農業"
+    },
+    {
+      "key": "Category.Arcane.Name",
+      "text": "奧術"
+    },
+    {
+      "key": "Category.Civic.Desc",
+      "text": "[Civic]民政公會圍繞升級[House]運作，並廣泛影響[Residence]和[Sacred] @次要重點是建築稀有度"
+    },
+    {
+      "key": "Category.Civic.Name",
+      "text": "民政"
+    },
+    {
+      "key": "Category.Commercial.Desc",
+      "text": "[Commercial]公會致力於賺取[Gold]，並利用市場上的[Stall]、[Trader]、[Entertainment]和[Luxury] "
+    },
+    {
+      "key": "Category.Commercial.Name",
+      "text": "商業"
+    },
+    {
+      "key": "Category.Consumable.Name",
+      "text": "消耗品"
+    },
+    {
+      "key": "Category.Crop.Name",
+      "text": "作物"
+    },
+    {
+      "key": "Category.Engineering.Name",
+      "text": "工程"
+    },
+    {
+      "key": "Category.Entertainment.Name",
+      "text": "娛樂"
+    },
+    {
+      "key": "Category.Farm.Name",
+      "text": "農場"
+    },
+    {
+      "key": "Category.Fishing.Name",
+      "text": "漁業"
+    },
+    {
+      "key": "Category.Fortification.Name",
+      "text": "防禦"
+    },
+    {
+      "key": "Category.Frontier.Desc",
+      "text": "[Frontier]公會專注於[Nature]，次要重點為[Healing]、[Husbandry]和[Sacred]\n@許多建築會與[Reroll]互動"
+    },
+    {
+      "key": "Category.Frontier.Name",
+      "text": "邊疆"
+    },
+    {
+      "key": "Category.Gem.Name",
+      "text": "寶石"
+    },
+    {
+      "key": "Category.Hazard.Name",
+      "text": "危險"
+    },
+    {
+      "key": "Category.Healing.Name",
+      "text": "治療"
+    },
+    {
+      "key": "Category.Heirloom.Name",
+      "text": "傳家寶"
+    },
+    {
+      "key": "Category.House.Name",
+      "text": "房屋"
+    },
+    {
+      "key": "Category.Husbandry.Name",
+      "text": "畜牧"
+    },
+    {
+      "key": "Category.Industrial.Desc",
+      "text": "[Industrial]公會以[Resource]的生產與消耗供應鏈為核心 @類別包括[Manufacturer]、[Engineering]和[Woodworking]"
+    },
+    {
+      "key": "Category.Industrial.Name",
+      "text": "工業"
+    },
+    {
+      "key": "Category.Infrastructure.Name",
+      "text": "基礎設施"
+    },
+    {
+      "key": "Category.Irrigator.Name",
+      "text": "灌溉"
+    },
+    {
+      "key": "Category.Luxury.Name",
+      "text": "奢華"
+    },
+    {
+      "key": "Category.Manufacturer.Name",
+      "text": "製造"
+    },
+    {
+      "key": "Category.Marine.Desc",
+      "text": "[Marine]公會是唯一與[Ocean]相關的公會，專注於[Ship]、[Fishing]並與其他公會交集"
+    },
+    {
+      "key": "Category.Marine.Name",
+      "text": "海事"
+    },
+    {
+      "key": "Category.Martial.Desc",
+      "text": "[Martial]公會圍繞[Remove]運作\n@類別重點包括[Training]、[Fortification]和[Healing]"
+    },
+    {
+      "key": "Category.Martial.Name",
+      "text": "武裝"
+    },
+    {
+      "key": "Category.Monument.Name",
+      "text": "紀念碑"
+    },
+    {
+      "key": "Category.Nature.Name",
+      "text": "自然"
+    },
+    {
+      "key": "Category.Neutral.Name",
+      "text": "中立"
+    },
+    {
+      "key": "Category.None.Name",
+      "text": "無"
+    },
+    {
+      "key": "Category.Provisioner.Name",
+      "text": "補給者"
+    },
+    {
+      "key": "Category.Random.Name",
+      "text": "隨機類別"
+    },
+    {
+      "key": "Category.Residence.Name",
+      "text": "住宅"
+    },
+    {
+      "key": "Category.Resource.Name",
+      "text": "資源"
+    },
+    {
+      "key": "Category.Rogues.Name",
+      "text": "盜賊"
+    },
+    {
+      "key": "Category.Ruins.Name",
+      "text": "遺跡"
+    },
+    {
+      "key": "Category.Sacred.Name",
+      "text": "神聖"
+    },
+    {
+      "key": "Category.Ship.Name",
+      "text": "船舶"
+    },
+    {
+      "key": "Category.Stall.Name",
+      "text": "攤位"
+    },
+    {
+      "key": "Category.Tome.Name",
+      "text": "書卷"
+    },
+    {
+      "key": "Category.Trader.Name",
+      "text": "商人"
+    },
+    {
+      "key": "Category.Training.Name",
+      "text": "訓練"
+    },
+    {
+      "key": "Category.Wild.Name",
+      "text": "荒野"
+    },
+    {
+      "key": "Category.Woodworking.Name",
+      "text": "木工"
+    },
+    {
+      "key": "Cauldron.Description",
+      "text": "每當你[Dismiss]一個建築，就獲得一個隨機[Potion]"
+    },
+    {
+      "key": "Cauldron.Name",
+      "text": "大鍋"
+    },
+    {
+      "key": "ChangeActivationCount.Description",
+      "text": "如果建築會影響有限數量的目標，將該數量提高 [TriggerCountModificationParam] [BREAK]例如：建立1個[Trees] → 建立2個[Trees]"
+    },
+    {
+      "key": "ChangeActivationCount.Name",
+      "text": "管線工程"
+    },
+    {
+      "key": "ChangeCount.Description",
+      "text": "將建築的最大冷卻時間降低 [CooldownModificationParam]"
+    },
+    {
+      "key": "ChangeCount.Name",
+      "text": "木構架"
+    },
+    {
+      "key": "ChangeMult.Description",
+      "text": "使一個建築獲得 [MultParam]"
+    },
+    {
+      "key": "ChangeMult.Name",
+      "text": "砌石工程"
+    },
+    {
+      "key": "ChangeRange.Description",
+      "text": "使一個建築獲得 [RangeModificationParam] [Range]"
+    },
+    {
+      "key": "ChangeRange.Name",
+      "text": "絞盤"
+    },
+    {
+      "key": "CharacterAdmiralData.Description",
+      "text": "威風凜凜的[Admiral]加入議會。他大膽的策略偏好[Ship]和[Fortification]"
+    },
+    {
+      "key": "CharacterAdmiralData.Name",
+      "text": "海軍上將"
+    },
+    {
+      "key": "CharacterAntiquarianData.Description",
+      "text": "眼光獨到的[Antiquarian]加入議會。她尋找[Heirlooms]、[Gem]和[Tome]"
+    },
+    {
+      "key": "CharacterAntiquarianData.Name",
+      "text": "古物鑑賞家"
+    },
+    {
+      "key": "CharacterArtistData.Description",
+      "text": "充滿靈感的[Artist]加入議會。她提供顏料，並使[Consumable]受益"
+    },
+    {
+      "key": "CharacterArtistData.Name",
+      "text": "藝術家"
+    },
+    {
+      "key": "CharacterData.Admiral.Effect.Heirloom",
+      "text": "獲得一件[CaptainsHat]傳家寶"
+    },
+    {
+      "key": "CharacterData.Admiral.Effect.ShipRange",
+      "text": "所有[Ship]獲得 [AdmiralRangeModificationParam] 範圍"
+    },
+    {
+      "key": "CharacterData.Antiquarian.Effect.GainBoxOrShelf",
+      "text": "隨機獲得[JewelleryBox]或[Bookshelf]其中一個"
+    },
+    {
+      "key": "CharacterData.Antiquarian.Effect.GainChest",
+      "text": "獲得一個[Heirloom]寶箱，僅包含[Uncommon]或更高稀有度的物品"
+    },
+    {
+      "key": "CharacterData.Antiquarian.Effect.GainTomeOrGem",
+      "text": "隨機獲得[Tome]或[Gem]"
+    },
+    {
+      "key": "CharacterData.Artist.Effect.GainPaint",
+      "text": "獲得隨機顏料[BuildingSupply]"
+    },
+    {
+      "key": "CharacterData.Artist.Effect.GainSlot",
+      "text": "額外獲得一個[Consumable]欄位"
+    },
+    {
+      "key": "CharacterData.Druid.Effect.NatureIsSacred",
+      "text": "所有[Nature]也視為[Sacred]"
+    },
+    {
+      "key": "CharacterData.Druid.Name",
+      "text": "德魯伊"
+    },
+    {
+      "key": "CharacterData.Effect.BasicMult",
+      "text": "[Category1]和[Category2] [CouncilGenericMult]"
+    },
+    {
+      "key": "CharacterData.Effect.Pack.Both",
+      "text": "獲得一個免費的[Blueprint]卡包，內含[Category1]和[Category2]"
+    },
+    {
+      "key": "CharacterData.Effect.Pack.One",
+      "text": "獲得一個免費的[Blueprint]卡包，內含[Category1]"
+    },
+    {
+      "key": "CharacterData.Farmer.Effect.Harvest",
+      "text": "收割地圖上的所有[Crop]，將它們{轉化}為空田地"
+    },
+    {
+      "key": "CharacterData.Farmer.Effect.Heirloom",
+      "text": "獲得一件[Scythe][Heirloom]"
+    },
+    {
+      "key": "CharacterData.Farmer.Effect.IrrigationBlueprint",
+      "text": "獲得一張[Reservoir][Blueprint]"
+    },
+    {
+      "key": "CharacterData.Farmer.Name",
+      "text": "耕作者"
+    },
+    {
+      "key": "CharacterData.Fool.Effect.Heirloom",
+      "text": "獲得一件[JesterHat][Heirloom]"
+    },
+    {
+      "key": "CharacterData.Inventor.Effect.Mult",
+      "text": "當建立[Engineering]時，使[Adjacent]建築獲得 [InventorMultParam]"
+    },
+    {
+      "key": "CharacterData.Inventor.Effect.Reroll",
+      "text": "當建築位於[Provisioner]的[InRange]內並觸發時，有[InventorPercentageChance]機率獲得[InventorRerollCount]"
+    },
+    {
+      "key": "CharacterData.Merchant.Effect.GainGold",
+      "text": "獲得 [CouncilGenericMoney]"
+    },
+    {
+      "key": "CharacterData.Merchant.Effect.ShopCheaper",
+      "text": "商店中的物品和卡包便宜 [MerchantPercentageChance]"
+    },
+    {
+      "key": "CharacterData.Merchant.Effect.TradersGiveGold",
+      "text": "[Trader]每次觸發時，有 [MerchantPercentageChance] 的機率給予 [MerchantMoneyCount]"
+    },
+    {
+      "key": "CharacterData.Merchant.Name",
+      "text": "商人"
+    },
+    {
+      "key": "CharacterData.Politician.Effect.ChangeGuilds",
+      "text": "在一局遊戲中重新選擇公會"
+    },
+    {
+      "key": "CharacterData.Politician.Effect.OtherVote",
+      "text": "隨機獲得一張[CouncilVote]，供不同的[CouncilMember]使用"
+    },
+    {
+      "key": "CharacterData.Ranger.Effect.FishingHuntMult",
+      "text": "如果[Husbandry]和[Fishing]為[Adjacent]，兩者都獲得[RangerMultParam]"
+    },
+    {
+      "key": "CharacterData.Ranger.Effect.TreesHunt",
+      "text": "[Trees]視為[Husbandry]"
+    },
+    {
+      "key": "CharacterData.Ranger.Name",
+      "text": "遊俠"
+    },
+    {
+      "key": "CharacterData.Sensei.Effect.Range",
+      "text": "[Training]被動擁有 [SenseiRangeModificationParam] [Range]，每有3個[Adjacent] [Nature]"
+    },
+    {
+      "key": "CharacterData.Sensei.Effect.Reroll",
+      "text": "每當建立[Woodworking]時，它會獲得 [SenseiRemoveCount]"
+    },
+    {
+      "key": "CharacterData.Spymaster.Effect.AddGuild",
+      "text": "將秘密的[Rogues]公會建築加入本局牌池。永久解鎖[Spymaster]"
+    },
+    {
+      "key": "CharacterData.Spymaster.Effect.Bribery",
+      "text": "啟用賄賂，可用[Gold]立即完成里程碑"
+    },
+    {
+      "key": "CharacterData.Spymaster.Effect.CouncilVote",
+      "text": "獲得另一名現有議會成員的隨機[CouncilVote]"
+    },
+    {
+      "key": "CharacterData.Tycoon.Effect.Landlord",
+      "text": "驅逐地圖上所有[Residence]（除非它們同時是[Fortification]），{transforming}它們成為[HousePlot] @每個獲得[TycoonMoneyCount]"
+    },
+    {
+      "key": "CharacterData.Tycoon.Effect.NatureIsResource",
+      "text": "所有[Nature]也視為[Resource]"
+    },
+    {
+      "key": "CharacterData.Witch.Effect.HazardAdj",
+      "text": "[Healing]具有[WitchRangeModificationParam][Range]——若它們位於[InRange]的[Hazard]範圍內，則改為具有[WitchBaseScore]"
+    },
+    {
+      "key": "CharacterData.Witch.Effect.HazardDouble",
+      "text": "若建築位於[Hazard]的[InRange]內，且被其他事物{觸發}，則再次被{觸發}"
+    },
+    {
+      "key": "CharacterData.Wizard.Effect.AddGuild",
+      "text": "將秘密的[Arcane]公會建築加入本局牌池。永久解鎖[Wizard]"
+    },
+    {
+      "key": "CharacterData.Wizard.Effect.Potion",
+      "text": "獲得一個隨機[Potion]"
+    },
+    {
+      "key": "CharacterData.Wizard.Effect.PurplePaint",
+      "text": "將[BsPurplePaint]加入本局的[BuildingUpgrade]牌池"
+    },
+    {
+      "key": "CharacterDruidData.Description",
+      "text": "隱居的[Druid]加入議會。汲取神秘力量，強化[Nature]與[Sacred]"
+    },
+    {
+      "key": "CharacterFarmerData.Description",
+      "text": "綠手指的[Farmer]加入議會。她的深厚知識有益於[Farm]與[Irrigator]"
+    },
+    {
+      "key": "CharacterFoolData.Description",
+      "text": "滑稽的[Fool]加入議會。儘管行事荒唐，他仍能使[Entertainment]與[Stall]受益"
+    },
+    {
+      "key": "CharacterFoolData.Name",
+      "text": "愚人"
+    },
+    {
+      "key": "CharacterInventorData.Description",
+      "text": "混亂的[Inventor]加入議會。他的實驗有益於[Engineering]與[Provisioner]"
+    },
+    {
+      "key": "CharacterInventorData.Name",
+      "text": "發明家"
+    },
+    {
+      "key": "CharacterMerchantData.Description",
+      "text": "精明的[Merchant]加入議會。他貪婪的計謀專注於[Trader]與產生[Gold]"
+    },
+    {
+      "key": "CharacterPoliticianData.Description",
+      "text": "睿智的[Politician]加入議會。他的權謀有益於[Monument]與[Luxury]，甚至讓你能在一局中途更換公會"
+    },
+    {
+      "key": "CharacterPoliticianData.Name",
+      "text": "政治家"
+    },
+    {
+      "key": "CharacterRangerData.Description",
+      "text": "獨來獨往的[Ranger]加入議會。她從荒野歸來，負責管理[Husbandry]與[Fishing]"
+    },
+    {
+      "key": "CharacterSenseiData.Description",
+      "text": "睿智的[Sensei]加入議會。他的紀律支持[Training]與[Woodworking]"
+    },
+    {
+      "key": "CharacterSenseiData.Name",
+      "text": "戰士"
+    },
+    {
+      "key": "CharacterSpymasterData.Description",
+      "text": "狡猾的[Spymaster]加入議會。她啟用賄賂，並提供加入[Rogues]公會的途徑 "
+    },
+    {
+      "key": "CharacterSpymasterData.Name",
+      "text": "密探"
+    },
+    {
+      "key": "CharacterTycoonData.Description",
+      "text": "冷酷的[Tycoon]加入議會。他牢牢掌控[Manufacturer]與[Residence]"
+    },
+    {
+      "key": "CharacterTycoonData.Name",
+      "text": "大亨"
+    },
+    {
+      "key": "CharacterWitchData.Description",
+      "text": "神秘的[Witch]加入議會。她的法術有益於[Arcane]與[Healing]，也不畏懼[Hazard]"
+    },
+    {
+      "key": "CharacterWitchData.Name",
+      "text": "女巫"
+    },
+    {
+      "key": "CharacterWizardData.Description",
+      "text": "神秘的[Wizard]加入議會。他創造[Potion]，並讓你能使用[Arcane]公會"
+    },
+    {
+      "key": "CharacterWizardData.Name",
+      "text": "巫師"
+    },
+    {
+      "key": "Charcoal.Description",
+      "text": "[Campfire]燃燒的時間延長至[ActivationCount]倍"
+    },
+    {
+      "key": "Charcoal.Name",
+      "text": "木炭"
+    },
+    {
+      "key": "CheckeredFlag.Description",
+      "text": "每個里程碑中第一座建造的建築獲得[MultParam]"
+    },
+    {
+      "key": "CheckeredFlag.Name",
+      "text": "起跑旗"
+    },
+    {
+      "key": "Church.Description",
+      "text": "{每[Cooldown]週觸發一次：} @[CategoryScoreSacred]：每個[Sacred][InRange]"
+    },
+    {
+      "key": "Church.Name",
+      "text": "教堂"
+    },
+    {
+      "key": "Circus.Description",
+      "text": "{建築在[InRange]獲得[Gold]時觸發：} @[CategoryScoreResidence]：每個[Residence][InRange]"
+    },
+    {
+      "key": "Circus.Name",
+      "text": "馬戲團"
+    },
+    {
+      "key": "ClearanceShovel.Description",
+      "text": "每當建築由[Blueprint]建造時，收割所有[Crop]，將位於其[Adjacent]的作物變回空田地"
+    },
+    {
+      "key": "ClearanceShovel.Name",
+      "text": "清場鏟"
+    },
+    {
+      "key": "Clipper.Description",
+      "text": "{每[Cooldown]週觸發一次：} @[MoneyCount]：每個[ActivationCount]個[Trader]、[Manufacturer]或[Luxury][InRange]（向下取整）"
+    },
+    {
+      "key": "Clipper.Name",
+      "text": "快艇"
+    },
+    {
+      "key": "Clover.Description",
+      "text": "[Monument]被擲出的機率提高3倍"
+    },
+    {
+      "key": "Clover.Name",
+      "text": "幸運四葉草"
+    },
+    {
+      "key": "CoinBag.Description",
+      "text": "每個里程碑前期每週額外獲得[MoneyCount]"
+    },
+    {
+      "key": "CoinBag.Name",
+      "text": "錢袋"
+    },
+    {
+      "key": "CoinStack.Description",
+      "text": "每當你從建築獲得[Gold]，或從[Heirloom]獲得收益，額外獲得[MoneyCount] @裝備此物時，無法進入商店"
+    },
+    {
+      "key": "CoinStack.Name",
+      "text": "錢幣堆"
+    },
+    {
+      "key": "Composter.Description",
+      "text": "{建築在[InRange]被移除時觸發：} @使每個[Farm][InRange]獲得[MultParam] [BREAK]{被動：}在週末自動{移除}任何[Adjacent][Manure]"
+    },
+    {
+      "key": "Composter.Name",
+      "text": "堆肥機"
+    },
+    {
+      "key": "Conduit.Description",
+      "text": "{觸發時：}{觸發}最多[ActivationCount]座位於[InRange]的其他建築"
+    },
+    {
+      "key": "Conduit.Name",
+      "text": "導管"
+    },
+    {
+      "key": "CorruptedFort.Description",
+      "text": "{每[Cooldown]週觸發一次：} @{移除}[ActivationCount]座位於[InRange]內的隨機建築 @然後，使[Range]增加[RangeModificationParam]"
+    },
+    {
+      "key": "CorruptedFort.Name",
+      "text": "腐化堡壘"
+    },
+    {
+      "key": "CorruptedGrove.Description",
+      "text": "{被動：}[InRange]內的建築無法獲得[Reroll]、[Remove]、[Dismiss]或[Gold]\n@{每[Cooldown]週觸發一次：}增加[Range][RangeModificationParam]"
+    },
+    {
+      "key": "CorruptedGrove.Name",
+      "text": "腐化樹林"
+    },
+    {
+      "key": "CorruptedLantern.Description",
+      "text": "{被動：}增加[InRange]內建築的冷卻時間[CooldownModificationParam]\n@{每[Cooldown]週觸發一次：}增加[Range][RangeModificationParam]"
+    },
+    {
+      "key": "CorruptedLantern.Name",
+      "text": "腐化燈籠"
+    },
+    {
+      "key": "CorruptedMine.Description",
+      "text": "{每[Cooldown]週觸發一次：} @{建立}[ActivationCount]個[Rocks]於[InRange]內的隨機地格 @然後，使[Range]增加[RangeModificationParam]"
+    },
+    {
+      "key": "CorruptedMine.Name",
+      "text": "腐化礦坑"
+    },
+    {
+      "key": "CorruptedObelisk.Description",
+      "text": "{被動：}建築無法放置在[Range]的[CorruptedObelisk]範圍內\n@{每[Cooldown]週觸發一次：}增加[Range][RangeModificationParam]"
+    },
+    {
+      "key": "CorruptedObelisk.Name",
+      "text": "腐化方尖碑"
+    },
+    {
+      "key": "CorruptedShrine.Description",
+      "text": "{被動：}[InRange]內的建築獲得[BaseScore][Range]\n@{每[Cooldown]週觸發一次：}增加[Range][RangeModificationParam]"
+    },
+    {
+      "key": "CorruptedShrine.Name",
+      "text": "腐化神龕"
+    },
+    {
+      "key": "CorruptedTemple.Name",
+      "text": "腐化神殿"
+    },
+    {
+      "key": "CorruptedTower.Description",
+      "text": "{每[Cooldown]週觸發一次：} @{轉化}[InRange]內的一座建築，使其變成同稀有度的隨機建築@然後，使[Range]增加[RangeModificationParam]"
+    },
+    {
+      "key": "CorruptedTower.Name",
+      "text": "腐化高塔"
+    },
+    {
+      "key": "CottonField.Description",
+      "text": "在[Cooldown]週內生長（變形），接著{觸發：} @使每座[Adjacent]建築獲得[MultParam]"
+    },
+    {
+      "key": "CottonField.Name",
+      "text": "棉花田"
+    },
+    {
+      "key": "CouncilUnlockData.Description",
+      "text": "解鎖城市議會 @使用[CouncilVote]為議員投票——每位議員都有獨特的被動能力。\n@[CouncilVote]現在會出現在商店或卡包中"
+    },
+    {
+      "key": "Crane.Description",
+      "text": "若[Ship]的[Range]與[Crane]重疊，將[Crane]的[Range]加到[Ship]上"
+    },
+    {
+      "key": "Crane.Name",
+      "text": "起重機"
+    },
+    {
+      "key": "CrystalBall.Description",
+      "text": "每週選擇一座[BaseScore]建築 @[CategoryScorePrimary]：每個里程碑週數"
+    },
+    {
+      "key": "CrystalBall.Name",
+      "text": "水晶球"
+    },
+    {
+      "key": "Darkstone.Description",
+      "text": "每當[Hazard]觸發時，獲得[MoneyCount]、[RerollCount]與[RemoveCount]"
+    },
+    {
+      "key": "Darkstone.Name",
+      "text": "暗石"
+    },
+    {
+      "key": "DeckOfCards.Description",
+      "text": "每當你從建築獲得[Gold]，或從[Heirloom]獲得收益，有[PercentageChance]機率獲得[RerollCount]"
+    },
+    {
+      "key": "DeckOfCards.Name",
+      "text": "紙牌組"
+    },
+    {
+      "key": "DeliveryCart.Description",
+      "text": "任何位於[InRange]的[Warehouse]範圍內的建築都視為[Trader]"
+    },
+    {
+      "key": "DeliveryCart.Name",
+      "text": "送貨車"
+    },
+    {
+      "key": "Depot.Description",
+      "text": "{[Resource]在[InRange]內生成時觸發：} @移除它，並在[Adjacent]的[Depot]處生成一個複製品"
+    },
+    {
+      "key": "Depot.Name",
+      "text": "倉庫"
+    },
+    {
+      "key": "Detonator.Description",
+      "text": "現在可以在[Rocks]上建造"
+    },
+    {
+      "key": "Detonator.Name",
+      "text": "引爆器"
+    },
+    {
+      "key": "DiamondPick.Description",
+      "text": "[Quarry]生成[Ore]而非[Rocks]"
+    },
+    {
+      "key": "DiamondPick.Name",
+      "text": "鑽石鎬"
+    },
+    {
+      "key": "DiamondRing.Description",
+      "text": "始終具有[MoneyCount]的基礎售價"
+    },
+    {
+      "key": "DiamondRing.Name",
+      "text": "寶石戒指"
+    },
+    {
+      "key": "DiceCup.Description",
+      "text": "你可以花費[RerollCount]，對卡包進行一次[Reroll][BREAK]不可疊加"
+    },
+    {
+      "key": "DiceCup.Name",
+      "text": "擲骰杯"
+    },
+    {
+      "key": "Disguise.Description",
+      "text": "[TargetCategory1]也視為[TargetCategory2]"
+    },
+    {
+      "key": "Disguise.Name",
+      "text": "變色龍雕像"
+    },
+    {
+      "key": "DismissUnlockData.Description",
+      "text": "現在可以在商店購買[Dismiss] @[Dismiss]用於在一局期間將建築從可用建築牌池中移除"
+    },
+    {
+      "key": "DivingHelmet.Description",
+      "text": "每當你創造[FishingBoat]時，獲得一個[GemPearl]"
+    },
+    {
+      "key": "DivingHelmet.Name",
+      "text": "潛水頭盔"
+    },
+    {
+      "key": "DraftingRuler.Description",
+      "text": "每當建築由[Blueprint]建立時，立即{觸發}該建築"
+    },
+    {
+      "key": "DraftingRuler.Name",
+      "text": "製圖尺"
+    },
+    {
+      "key": "DuplicateBuilding.Description",
+      "text": "選擇兩座建築，將第二座變成第一座的完全複製品"
+    },
+    {
+      "key": "DuplicateBuilding.Name",
+      "text": "複製藥劑"
+    },
+    {
+      "key": "Dynamite.Description",
+      "text": "建築被移除時，會使{on remove}效果觸發兩次"
+    },
+    {
+      "key": "Dynamite.Name",
+      "text": "炸藥"
+    },
+    {
+      "key": "EffigyPyre.Description",
+      "text": "{經過[Cooldown]週後觸發：} @移除自身並{觸發}每座[Adjacent]建築 "
+    },
+    {
+      "key": "EffigyPyre.Name",
+      "text": "肖像火葬堆"
+    },
+    {
+      "key": "EmptyCage.Description",
+      "text": "每當任何建築計分時，獲得[BaseScore]：每個空的[Heirloom]欄位"
+    },
+    {
+      "key": "EmptyCage.Name",
+      "text": "空籠"
+    },
+    {
+      "key": "Enclave.Description",
+      "text": "{創造時觸發：}[EnchantmentParam] [BREAK]只能{ever}放置在[Grass]上，並[Adjacent]於懸崖"
+    },
+    {
+      "key": "Enclave.Name",
+      "text": "飛地"
+    },
+    {
+      "key": "EndlessUnlockData.Description",
+      "text": "抵達大都會後，現在可以遊玩無盡模式。無盡模式不會計入解鎖進度"
+    },
+    {
+      "key": "Factory.Description",
+      "text": "{每[Cooldown]週觸發：} @開啟免費隨機卡包[BREAK]只能建立在至少5個[Industrial]都與其[Adjacent]的位置"
+    },
+    {
+      "key": "Factory.Name",
+      "text": "工廠"
+    },
+    {
+      "key": "FaerieRing.Description",
+      "text": "{每[Cooldown]週觸發：} @{Trigger}[ActivationCount]個隨機[Adjacent]建築"
+    },
+    {
+      "key": "FaerieRing.Name",
+      "text": "妖精環"
+    },
+    {
+      "key": "FavourAdmiral.Description",
+      "text": "增加一張[CouncilVote]給[Admiral]"
+    },
+    {
+      "key": "FavourAdmiral.Name",
+      "text": "海軍上將選票"
+    },
+    {
+      "key": "FavourAntiquarian.Description",
+      "text": "增加一張[CouncilVote]給[Antiquarian]"
+    },
+    {
+      "key": "FavourAntiquarian.Name",
+      "text": "古董商選票"
+    },
+    {
+      "key": "FavourArtist.Description",
+      "text": "增加一張[CouncilVote]給[Artist]"
+    },
+    {
+      "key": "FavourArtist.Name",
+      "text": "藝術家選票"
+    },
+    {
+      "key": "FavourDruid.Description",
+      "text": "增加一張[CouncilVote]給[Druid]"
+    },
+    {
+      "key": "FavourDruid.Name",
+      "text": "德魯伊選票"
+    },
+    {
+      "key": "FavourFarmer.Description",
+      "text": "增加一張[CouncilVote]給[Farmer]"
+    },
+    {
+      "key": "FavourFarmer.Name",
+      "text": "耕作者選票"
+    },
+    {
+      "key": "FavourFool.Description",
+      "text": "增加一張[CouncilVote]給[Fool]"
+    },
+    {
+      "key": "FavourFool.Name",
+      "text": "愚者選票"
+    },
+    {
+      "key": "FavourInventor.Description",
+      "text": "增加一張[CouncilVote]給[Inventor]"
+    },
+    {
+      "key": "FavourInventor.Name",
+      "text": "發明家選票"
+    },
+    {
+      "key": "FavourMerchant.Description",
+      "text": "增加一張[CouncilVote]給[Merchant]"
+    },
+    {
+      "key": "FavourMerchant.Name",
+      "text": "商人選票"
+    },
+    {
+      "key": "FavourPolitician.Description",
+      "text": "增加一張[CouncilVote]給[Politician]"
+    },
+    {
+      "key": "FavourPolitician.Name",
+      "text": "政治家選票"
+    },
+    {
+      "key": "FavourRanger.Description",
+      "text": "增加一張[CouncilVote]給[Ranger]"
+    },
+    {
+      "key": "FavourRanger.Name",
+      "text": "遊俠選票"
+    },
+    {
+      "key": "FavourSensei.Description",
+      "text": "增加一張[CouncilVote]給[Sensei]"
+    },
+    {
+      "key": "FavourSensei.Name",
+      "text": "武士選票"
+    },
+    {
+      "key": "FavourSpymaster.Description",
+      "text": "增加一張[CouncilVote]給[Spymaster]"
+    },
+    {
+      "key": "FavourSpymaster.Name",
+      "text": "間諜首領選票"
+    },
+    {
+      "key": "FavourTycoon.Description",
+      "text": "增加一張[CouncilVote]給[Tycoon]"
+    },
+    {
+      "key": "FavourTycoon.Name",
+      "text": "大亨選票"
+    },
+    {
+      "key": "FavourWitch.Description",
+      "text": "增加一張[CouncilVote]給[Witch]"
+    },
+    {
+      "key": "FavourWitch.Name",
+      "text": "女巫選票"
+    },
+    {
+      "key": "FavourWizard.Description",
+      "text": "增加一張[CouncilVote]給[Wizard]"
+    },
+    {
+      "key": "FavourWizard.Name",
+      "text": "巫師選票"
+    },
+    {
+      "key": "FawkesMask.Description",
+      "text": "所有[Rogues]建築增加分數而非扣除分數"
+    },
+    {
+      "key": "FawkesMask.Name",
+      "text": "福克斯面具"
+    },
+    {
+      "key": "Fertilizer.Description",
+      "text": "任何能在[Grass]上建造的建築，也能在[Sand]上建造，反之亦然"
+    },
+    {
+      "key": "Fertilizer.Name",
+      "text": "肥料"
+    },
+    {
+      "key": "FieldHospital.Description",
+      "text": "{觸發時：} @使每個位於[InRange]的[Healing]或[Training]獲得[MultParam] "
+    },
+    {
+      "key": "FieldHospital.Name",
+      "text": "野戰醫院"
+    },
+    {
+      "key": "Fish.Name",
+      "text": "魚"
+    },
+    {
+      "key": "FishFarm.Description",
+      "text": "{每[Cooldown]週觸發：} @{建立}[ActivationCount]條[Fish]於[InRange]內的空[Ocean]地格"
+    },
+    {
+      "key": "FishFarm.Name",
+      "text": "養魚場"
+    },
+    {
+      "key": "FishTrap.Description",
+      "text": "{建造時觸發：} {觸發}所有位於[InRange]的[Fishing]，不包括其他[FishTrap][BREAK]視為[Fish]"
+    },
+    {
+      "key": "FishTrap.Name",
+      "text": "捕魚陷阱"
+    },
+    {
+      "key": "Fisher.Description",
+      "text": "{被動：}位於[InRange]的[Fishing]獲得額外[Mult]，數值等於[Fisher]的[Mult]@不影響其他[Fisher]"
+    },
+    {
+      "key": "Fisher.Name",
+      "text": "漁屋"
+    },
+    {
+      "key": "FishingBoat.Description",
+      "text": "{每[Cooldown]週觸發：} @每個位於[InRange]的[Nature]提供[CategoryScoreNature]"
+    },
+    {
+      "key": "FishingBoat.Name",
+      "text": "漁船"
+    },
+    {
+      "key": "FishingNet.Description",
+      "text": "接下來的[Cooldown]個[Marine]建築不受[Range]放置限制"
+    },
+    {
+      "key": "FishingNet.Name",
+      "text": "漁網"
+    },
+    {
+      "key": "FishingRod.Description",
+      "text": "{每[Cooldown]週：}獲得一張隨機[Fishing][Blueprint]（必須有空間）"
+    },
+    {
+      "key": "FishingRod.Name",
+      "text": "舊魚竿"
+    },
+    {
+      "key": "Flowers.Name",
+      "text": "花朵"
+    },
+    {
+      "key": "ForemansHammer.Description",
+      "text": "每當連續建造[CooldownParam]座[Common]建築時，獲得一個隨機[BuildingUpgrade]"
+    },
+    {
+      "key": "ForemansHammer.Name",
+      "text": "工頭的鐵鎚"
+    },
+    {
+      "key": "Forester.Description",
+      "text": "{每[Cooldown]週觸發：} @{建立}[ActivationCount]棵[Trees]於[InRange]內的隨機地格"
+    },
+    {
+      "key": "Forester.Name",
+      "text": "伐木工"
+    },
+    {
+      "key": "Fortress.Description",
+      "text": "{當[InRange]內的建築被移除時觸發：} @每個位於[InRange]的[Fortification]或[Ship]提供[CategoryScoreFortification]"
+    },
+    {
+      "key": "Fortress.Name",
+      "text": "堡壘"
+    },
+    {
+      "key": "Fountain.Description",
+      "text": "{每當[Adjacent]建築轉變時觸發：} @[PercentageChance]的機率獲得[MoneyCount][BREAK][Crop][Adjacent]於[Fountain]相鄰，於1週內成長\n"
+    },
+    {
+      "key": "Fountain.Name",
+      "text": "噴泉"
+    },
+    {
+      "key": "Furniture.Description",
+      "text": "每[Cooldown]週，地圖上的每個[HouseResidence]提供[MoneyCount] @每當[TaxCollector]觸發時，此冷卻重置"
+    },
+    {
+      "key": "Furniture.Name",
+      "text": "家具"
+    },
+    {
+      "key": "GainBlueprint.Description",
+      "text": "獲得目標建築的[Blueprint]"
+    },
+    {
+      "key": "GainBlueprint.Name",
+      "text": "拓印護符"
+    },
+    {
+      "key": "GainGoldSellValue.Description",
+      "text": "獲得等同於所有已裝備[Heirloom]出售價值總和[TotalHeirloomSellValueSum]的金幣 @最多+50[Gold]"
+    },
+    {
+      "key": "GainGoldSellValue.Name",
+      "text": "璀璨溶液"
+    },
+    {
+      "key": "GainHeirloomSlot.Description",
+      "text": "+1個[Heirloom]欄位（總上限10個）"
+    },
+    {
+      "key": "GainHeirloomSlot.Name",
+      "text": "負空間"
+    },
+    {
+      "key": "Galleon.Description",
+      "text": "{每[Cooldown]週觸發：} @每個位於[InRange]的[Martial]提供[CategoryScoreMartial]"
+    },
+    {
+      "key": "Galleon.Name",
+      "text": "大型帆船"
+    },
+    {
+      "key": "GameItemType.Blueprint.Desc",
+      "text": "一次性免費建造"
+    },
+    {
+      "key": "GameItemType.Blueprint.Name",
+      "text": "藍圖"
+    },
+    {
+      "key": "GameItemType.BlueprintPack.Common.Name",
+      "text": "普通藍圖袋"
+    },
+    {
+      "key": "GameItemType.BlueprintPack.Masterwork.Name",
+      "text": "精工藍圖袋"
+    },
+    {
+      "key": "GameItemType.BlueprintPack.Rare.Name",
+      "text": "稀有藍圖袋"
+    },
+    {
+      "key": "GameItemType.BlueprintPack.Uncommon.Name",
+      "text": "非凡藍圖袋"
+    },
+    {
+      "key": "GameItemType.Booster.Name",
+      "text": "卡包"
+    },
+    {
+      "key": "GameItemType.BuildingUpgrade.Desc",
+      "text": "以一次性效果改造建築"
+    },
+    {
+      "key": "GameItemType.BuildingUpgrade.Name",
+      "text": "建築升級"
+    },
+    {
+      "key": "GameItemType.Consumable.Name",
+      "text": "消耗品"
+    },
+    {
+      "key": "GameItemType.CouncilMember.Name",
+      "text": "議會成員"
+    },
+    {
+      "key": "GameItemType.CouncilVote.Desc",
+      "text": "為議會成員增加一張選票。議會成員會在不同票數下提供各種被動效果"
+    },
+    {
+      "key": "GameItemType.CouncilVote.Name",
+      "text": "議會選票"
+    },
+    {
+      "key": "GameItemType.Dismiss.Desc",
+      "text": "將建築從可用建築池中移除"
+    },
+    {
+      "key": "GameItemType.Dismiss.Name",
+      "text": "棄置"
+    },
+    {
+      "key": "GameItemType.Enchantment.Desc",
+      "text": "你在一週結束時的總分會乘以附魔分數。附魔每週減少0.1，直到降至1"
+    },
+    {
+      "key": "GameItemType.Enchantment.Name",
+      "text": "附魔"
+    },
+    {
+      "key": "GameItemType.Heirloom.Desc",
+      "text": "提供被動效果。可裝備數量受可用欄位限制"
+    },
+    {
+      "key": "GameItemType.Heirloom.Name",
+      "text": "傳家寶"
+    },
+    {
+      "key": "GameItemType.LargeBlueprintPack.Name",
+      "text": "大型藍圖袋"
+    },
+    {
+      "key": "GameItemType.LargeBuildingSuppliesPack.Name",
+      "text": "大型材料堆"
+    },
+    {
+      "key": "GameItemType.LargeFavourPack.Name",
+      "text": "大型選票組"
+    },
+    {
+      "key": "GameItemType.LargeHeirloomPack.Name",
+      "text": "大型傳家寶寶箱"
+    },
+    {
+      "key": "GameItemType.LargeSpellPack.Name",
+      "text": "大型藥水袋"
+    },
+    {
+      "key": "GameItemType.Mult.Desc",
+      "text": "建築的分數會乘以此數值。所有建築的預設倍率皆為1"
+    },
+    {
+      "key": "GameItemType.Mult.Name",
+      "text": "倍率"
+    },
+    {
+      "key": "GameItemType.Potion.Desc",
+      "text": "一次性使用，具有各種魔法效果"
+    },
+    {
+      "key": "GameItemType.Potion.Name",
+      "text": "藥水"
+    },
+    {
+      "key": "GameItemType.Remove.Desc",
+      "text": "將建築從地圖上移除"
+    },
+    {
+      "key": "GameItemType.Remove.Name",
+      "text": "移除"
+    },
+    {
+      "key": "GameItemType.Reroll.Desc",
+      "text": "重新整理目前的建築選擇"
+    },
+    {
+      "key": "GameItemType.Reroll.Name",
+      "text": "重擲"
+    },
+    {
+      "key": "GameItemType.SmallBlueprintPack.Name",
+      "text": "小型藍圖袋"
+    },
+    {
+      "key": "GameItemType.SmallBuildingSuppliesPack.Name",
+      "text": "小型材料堆"
+    },
+    {
+      "key": "GameItemType.SmallFavourPack.Name",
+      "text": "小型選票組"
+    },
+    {
+      "key": "GameItemType.SmallHeirloomPack.Name",
+      "text": "小型傳家寶寶箱"
+    },
+    {
+      "key": "GameItemType.SmallSpellPack.Name",
+      "text": "小型藥水袋"
+    },
+    {
+      "key": "GardenersCottage.Description",
+      "text": "{每[Cooldown]週觸發：} @複製[ActivationCount]個[Adjacent][Nature]，並建立在[InRange]內的隨機地格上"
+    },
+    {
+      "key": "GardenersCottage.Name",
+      "text": "園丁小屋"
+    },
+    {
+      "key": "Gearwheel.Description",
+      "text": "接下來的[Cooldown]個[Industrial]建築不受[Range]放置限制"
+    },
+    {
+      "key": "Gearwheel.Name",
+      "text": "齒輪"
+    },
+    {
+      "key": "GemAmethyst.Description",
+      "text": "每當建築觸發時，獲得[BaseScore]"
+    },
+    {
+      "key": "GemAmethyst.Name",
+      "text": "紫水晶"
+    },
+    {
+      "key": "GemAquamarine.Description",
+      "text": "每當你開始里程碑時，獲得[BaseScore]"
+    },
+    {
+      "key": "GemAquamarine.Name",
+      "text": "海藍寶石"
+    },
+    {
+      "key": "GemEmerald.Description",
+      "text": "獲得[BaseScore]：每當你獲得[Reroll]"
+    },
+    {
+      "key": "GemEmerald.Name",
+      "text": "祖母綠"
+    },
+    {
+      "key": "GemGarnet.Description",
+      "text": "每當建築被移除時，獲得[BaseScore]"
+    },
+    {
+      "key": "GemGarnet.Name",
+      "text": "石榴石"
+    },
+    {
+      "key": "GemJasper.Description",
+      "text": "每當建築建立時，獲得[BaseScore]"
+    },
+    {
+      "key": "GemJasper.Name",
+      "text": "碧玉"
+    },
+    {
+      "key": "GemOnyx.Description",
+      "text": "獲得[BaseScore]：每當你使用[Consumable]"
+    },
+    {
+      "key": "GemOnyx.Name",
+      "text": "黑瑪瑙"
+    },
+    {
+      "key": "GemPearl.Description",
+      "text": "每當建築轉化時，獲得[BaseScore]"
+    },
+    {
+      "key": "GemPearl.Name",
+      "text": "珍珠"
+    },
+    {
+      "key": "GemSapphire.Description",
+      "text": "獲得[BaseScore]：每當你[Dismiss]建築"
+    },
+    {
+      "key": "GemSapphire.Name",
+      "text": "藍寶石"
+    },
+    {
+      "key": "GemTopaz.Description",
+      "text": "獲得[BaseScore]：每當你賺取[Gold]"
+    },
+    {
+      "key": "GemTopaz.Name",
+      "text": "黃玉"
+    },
+    {
+      "key": "Goblet.Description",
+      "text": "建築轉化時，不觸發轉化效果，而是同時算作移除與建立觸發"
+    },
+    {
+      "key": "Goblet.Name",
+      "text": "改命聖杯"
+    },
+    {
+      "key": "GoldNugget.Description",
+      "text": "每當[Ore]建立時，有[PercentageChance]的機率改為[GoldOre]"
+    },
+    {
+      "key": "GoldNugget.Name",
+      "text": "金塊"
+    },
+    {
+      "key": "GoldOre.Description",
+      "text": "{移除時觸發：} [MoneyCount]"
+    },
+    {
+      "key": "GoldOre.Name",
+      "text": "金礦"
+    },
+    {
+      "key": "GoldPaint.Description",
+      "text": "接下來的[Cooldown]週，目標建築獲得：{每當觸發時，獲得[MoneyCount]} [BREAK]建築同時只能有1種油漆)"
+    },
+    {
+      "key": "GoldPaint.Name",
+      "text": "金色油漆"
+    },
+    {
+      "key": "GoldPan.Description",
+      "text": "{建立時觸發：} [MoneyCount] [BREAK]只能建立在[Adjacent][Trees]的位置"
+    },
+    {
+      "key": "GoldPan.Name",
+      "text": "淘金盤"
+    },
+    {
+      "key": "GoldenEgg.Description",
+      "text": "每當[Neutral]建築建立時，使此傳家寶的出售價值增加[BaseScore]"
+    },
+    {
+      "key": "GoldenEgg.Name",
+      "text": "金蛋"
+    },
+    {
+      "key": "GoldenHorseshoe.Description",
+      "text": "每當里程碑完成時，額外獲得[MoneyCount]"
+    },
+    {
+      "key": "GoldenHorseshoe.Name",
+      "text": "金馬蹄"
+    },
+    {
+      "key": "GrainSilo.Description",
+      "text": "{每[Cooldown]週觸發：} @獲得一張隨機[Adjacent][Farm]的[Blueprint][BREAK]由[GrainSilo]取得的[Blueprint]只有1次使用次數"
+    },
+    {
+      "key": "GrainSilo.Name",
+      "text": "穀倉筒倉"
+    },
+    {
+      "key": "Granary.Description",
+      "text": "{建立時觸發：} @收割所有位於[InRange]的[Crop]，將其轉化回空田地"
+    },
+    {
+      "key": "Granary.Name",
+      "text": "穀倉"
+    },
+    {
+      "key": "Graveyard.Description",
+      "text": "{每當[Adjacent]建築被移除時觸發：} @獲得一張相同稀有度的隨機[Blueprint]"
+    },
+    {
+      "key": "Graveyard.Name",
+      "text": "墓園"
+    },
+    {
+      "key": "GreenPaint.Description",
+      "text": "接下來[Cooldown]週，目標建築獲得：{每當觸發時，獲得[RerollCount]} [BREAK]建築同時只能有1種油漆"
+    },
+    {
+      "key": "GreenPaint.Name",
+      "text": "綠色油漆"
+    },
+    {
+      "key": "Grove.Description",
+      "text": "{每[Cooldown]週觸發：} [RerollCount] [BREAK]只能建立在[Adjacent][Trees]的位置"
+    },
+    {
+      "key": "Grove.Name",
+      "text": "樹林"
+    },
+    {
+      "key": "GuaranteeNextRollIsRare.Description",
+      "text": "下一次{建築抽取}、[Blueprint]袋或[Heirloom]箱必定只會包含[Rare]或更高稀有度的物品。此效果會持續至[Reroll]後[BREAK]只能從{古雅村莊}開始使用"
+    },
+    {
+      "key": "GuaranteeNextRollIsRare.Name",
+      "text": "三葉草萃取物"
+    },
+    {
+      "key": "GuardTower.Description",
+      "text": "{當[InRange]內的建築被移除時觸發：} @{Trigger} [ActivationCount]個隨機[Adjacent]建築"
+    },
+    {
+      "key": "GuardTower.Name",
+      "text": "瞭望塔"
+    },
+    {
+      "key": "GuildCombo.AgriCivic",
+      "text": "佃農聯盟"
+    },
+    {
+      "key": "GuildCombo.AgriCommercial",
+      "text": "現金農夫"
+    },
+    {
+      "key": "GuildCombo.AgriIndustrial",
+      "text": "農產加工者"
+    },
+    {
+      "key": "GuildCombo.AgriMaritime",
+      "text": "海岸耕作者"
+    },
+    {
+      "key": "GuildCombo.AgriMartial",
+      "text": "軍需官"
+    },
+    {
+      "key": "GuildCombo.CivicCommercial",
+      "text": "商人"
+    },
+    {
+      "key": "GuildCombo.CivicIndustrial",
+      "text": "工會人士"
+    },
+    {
+      "key": "GuildCombo.CivicMaritime",
+      "text": "港務長"
+    },
+    {
+      "key": "GuildCombo.CommercialIndustrial",
+      "text": "商品推銷員"
+    },
+    {
+      "key": "GuildCombo.CommercialMaritime",
+      "text": "商船隊"
+    },
+    {
+      "key": "GuildCombo.FrontierAgri",
+      "text": "田野守望者"
+    },
+    {
+      "key": "GuildCombo.FrontierCivic",
+      "text": "拓荒者"
+    },
+    {
+      "key": "GuildCombo.FrontierCommercial",
+      "text": "探勘者"
+    },
+    {
+      "key": "GuildCombo.FrontierIndustrial",
+      "text": "伐木工"
+    },
+    {
+      "key": "GuildCombo.FrontierMaritime",
+      "text": "海岸遊騎兵"
+    },
+    {
+      "key": "GuildCombo.FrontierMartial",
+      "text": "第三軍團哨兵"
+    },
+    {
+      "key": "GuildCombo.MaritimeIndustrial",
+      "text": "索具工"
+    },
+    {
+      "key": "GuildCombo.MartialCivic",
+      "text": "宮廷衛士"
+    },
+    {
+      "key": "GuildCombo.MartialCommercial",
+      "text": "傭兵"
+    },
+    {
+      "key": "GuildCombo.MartialIndustrial",
+      "text": "鐵匠"
+    },
+    {
+      "key": "GuildCombo.MartialMaritime",
+      "text": "海軍軍官"
+    },
+    {
+      "key": "GuildSeal.Description",
+      "text": "接下來的[Cooldown]個[Commercial]建築不受[Range]放置限制"
+    },
+    {
+      "key": "GuildSeal.Name",
+      "text": "公會徽章"
+    },
+    {
+      "key": "Harpoon.Description",
+      "text": "與[Ocean][Adjacent]的[Martial]建築會被動獲得[MultParam]"
+    },
+    {
+      "key": "Harpoon.Name",
+      "text": "魚叉"
+    },
+    {
+      "key": "Harvester.Description",
+      "text": "{當[InRange]內有其他建築建立時觸發：} @{Trigger} [ActivationCount]個隨機的[Adjacent]建築"
+    },
+    {
+      "key": "Harvester.Name",
+      "text": "收割機"
+    },
+    {
+      "key": "Heraldry.Description",
+      "text": "每當建築被移除時，使與其[Adjacent]的其他建築獲得[MultParam]"
+    },
+    {
+      "key": "Heraldry.Name",
+      "text": "紋章"
+    },
+    {
+      "key": "HerbGarden.Description",
+      "text": "{建立時觸發：} @[RerollCount]並{觸發}所有[Adjacent]的[Healing]，不包括其他[HerbGarden][BREAK]{被動：}視為[Herbs]"
+    },
+    {
+      "key": "HerbGarden.Name",
+      "text": "香草園"
+    },
+    {
+      "key": "Herbalist.Description",
+      "text": "{建立時觸發：} @每個位於[InRange]的[Herbs]提供[TagScoreHerbs]"
+    },
+    {
+      "key": "Herbalist.Name",
+      "text": "草藥師"
+    },
+    {
+      "key": "Herbs.Name",
+      "text": "香草"
+    },
+    {
+      "key": "Hideout.Description",
+      "text": "{每當[Adjacent]建築得分時觸發：} [BaseScore]和[MoneyCount]"
+    },
+    {
+      "key": "Hideout.Name",
+      "text": "藏身處"
+    },
+    {
+      "key": "HotelBell.Description",
+      "text": "與[LodgingHouse][Adjacent]的建築視為[Residence]"
+    },
+    {
+      "key": "HotelBell.Name",
+      "text": "櫃檯鈴"
+    },
+    {
+      "key": "Hourglass.Description",
+      "text": "每個里程碑獲得[BaseScore]週"
+    },
+    {
+      "key": "Hourglass.Name",
+      "text": "沙漏"
+    },
+    {
+      "key": "HouseHomestead.Description",
+      "text": "{當位於[Healing]或[Trader]的[InRange]內，或與其[Adjacent]時觸發：} @[BaseScore]並{轉化}為[HouseTenement]"
+    },
+    {
+      "key": "HouseHomestead.Name",
+      "text": "家園"
+    },
+    {
+      "key": "HouseHut.Description",
+      "text": "{當位於[Provisioner]的[InRange]內，或與其[Adjacent]時觸發：} @[BaseScore]並{轉化}為[HouseHomestead]"
+    },
+    {
+      "key": "HouseHut.Name",
+      "text": "茅屋"
+    },
+    {
+      "key": "HousePlot.Description",
+      "text": "{當位於[Irrigator]的[InRange]內，或與其[Adjacent]時觸發：} @[BaseScore]並{轉化}為[HouseHut]"
+    },
+    {
+      "key": "HousePlot.Name",
+      "text": "地塊"
+    },
+    {
+      "key": "HouseResidence.Description",
+      "text": "最高等級的[House] @{觸發時：} [BaseScore]"
+    },
+    {
+      "key": "HouseResidence.Name",
+      "text": "莊園"
+    },
+    {
+      "key": "HouseTenement.Description",
+      "text": "{當位於[Entertainment]或[Training]的[InRange]內，或與其[Adjacent]時觸發：} @[BaseScore]並{轉化}為[HouseTownhouse]"
+    },
+    {
+      "key": "HouseTenement.Name",
+      "text": "公寓"
+    },
+    {
+      "key": "HouseTownhouse.Description",
+      "text": "{當位於[Luxury]或[Sacred]的[InRange]內，或與其[Adjacent]時觸發：} @[BaseScore]並{轉化}為[HouseResidence]"
+    },
+    {
+      "key": "HouseTownhouse.Name",
+      "text": "聯排屋"
+    },
+    {
+      "key": "HousingMandate.Description",
+      "text": "放置[HousePlot]時，額外放置1個"
+    },
+    {
+      "key": "HousingMandate.Name",
+      "text": "住房法"
+    },
+    {
+      "key": "HuntingBow.Description",
+      "text": "建築建立時，會使{建立時}效果觸發兩次 @若建築在建立後才觸發，則不適用"
+    },
+    {
+      "key": "HuntingBow.Name",
+      "text": "獵弓"
+    },
+    {
+      "key": "HuntingLodge.Description",
+      "text": "{每[Cooldown]週觸發：} @[TagScoreTrees]每個[Trees][InRange]內"
+    },
+    {
+      "key": "HuntingLodge.Name",
+      "text": "狩獵小屋"
+    },
+    {
+      "key": "Ingots.Description",
+      "text": "[Gold]收益會受[Mult]影響（最高x10）@所有已上漆建築被動擁有[MultParam]"
+    },
+    {
+      "key": "Ingots.Name",
+      "text": "錠塊"
+    },
+    {
+      "key": "Inn.Description",
+      "text": "{建立時觸發：} @你的下一次擲骰必定包含[Rare]或更高稀有度的建築 @只能建立在[Adjacent]的[Residence]或[Training]旁"
+    },
+    {
+      "key": "Inn.Name",
+      "text": "旅店"
+    },
+    {
+      "key": "Irrigation.Description",
+      "text": "其他[Adjacent]建築視為[Farm] @必須與[Reservoir]或[Irrigation][Connected] @不會以對角線連接[BREAK]與[Irrigation][Adjacent]的[Crop]會在1週內生長"
+    },
+    {
+      "key": "Irrigation.Name",
+      "text": "灌溉渠"
+    },
+    {
+      "key": "JarOfHoney.Description",
+      "text": "[Apiary]被動擁有[RangeModificationParam][Range]@[Apiary]也會因每個[InRange]的[Flowers]而被動擁有[MultParam]"
+    },
+    {
+      "key": "JarOfHoney.Name",
+      "text": "蜂蜜罐"
+    },
+    {
+      "key": "JesterHat.Description",
+      "text": "售出時，獲得另一件隨機已裝備[Heirloom]的複製品"
+    },
+    {
+      "key": "JesterHat.Name",
+      "text": "小丑帽"
+    },
+    {
+      "key": "Jeweller.Description",
+      "text": "{每[Cooldown]週觸發一次：} @{Remove}[ActivationCount]個隨機[Adjacent]建築，使所有已裝備[Heirloom]獲得[BaseScore]的售價。若該建築是[Luxury]，則改為使它們獲得[CategoryScoreMetalworking]"
+    },
+    {
+      "key": "Jeweller.Name",
+      "text": "珠寶商"
+    },
+    {
+      "key": "JewelleryBox.Description",
+      "text": "最多可容納8個[Gem]@[JewelleryBox]內的[Gem]擁有[MultParam]@裝滿時售出，獲得一件特殊的[Legendary][Heirloom][BREAK]無法複製"
+    },
+    {
+      "key": "JewelleryBox.Name",
+      "text": "珠寶盒"
+    },
+    {
+      "key": "JoustingArena.Description",
+      "text": "{移除[Adjacent]建築時觸發：}[MoneyCount]"
+    },
+    {
+      "key": "JoustingArena.Name",
+      "text": "騎士競技場"
+    },
+    {
+      "key": "KelpField.Description",
+      "text": "{移除時觸發：}[RerollCount]"
+    },
+    {
+      "key": "KelpField.Name",
+      "text": "海帶田"
+    },
+    {
+      "key": "Kitchen.Description",
+      "text": "{每[Cooldown]週觸發一次：} @[RarityScoreCommon]，每個[InRange]的[Common]各1份"
+    },
+    {
+      "key": "Kitchen.Name",
+      "text": "廚房"
+    },
+    {
+      "key": "Lamppost.Description",
+      "text": "{被動：}使[Adjacent]建築的冷卻時間縮短[CooldownModificationParam]"
+    },
+    {
+      "key": "Lamppost.Name",
+      "text": "路燈"
+    },
+    {
+      "key": "LanguageName",
+      "text": "繁體中文"
+    },
+    {
+      "key": "Lantern.Description",
+      "text": "{每當[Adjacent]建立[Nature]時觸發：}[RerollCount]"
+    },
+    {
+      "key": "Lantern.Name",
+      "text": "石燈籠"
+    },
+    {
+      "key": "LegionStandard.Description",
+      "text": "接下來[Cooldown]個[Martial]建築不受[Range]放置限制"
+    },
+    {
+      "key": "LegionStandard.Name",
+      "text": "軍團旗"
+    },
+    {
+      "key": "Lighthouse.Description",
+      "text": "{被動：}使[InRange]的[Ship]冷卻時間縮短[CooldownModificationParam]"
+    },
+    {
+      "key": "Lighthouse.Name",
+      "text": "燈塔"
+    },
+    {
+      "key": "LoadedDice.Description",
+      "text": "售出時，獲得[RerollCount][BREAK]售價為0[Gold]"
+    },
+    {
+      "key": "LoadedDice.Name",
+      "text": "灌鉛骰子"
+    },
+    {
+      "key": "LodgingHouse.Description",
+      "text": "{建立時觸發：} @從任何已解鎖的公會獲得[ActivationCount]個隨機[Residence][Blueprint]"
+    },
+    {
+      "key": "LodgingHouse.Name",
+      "text": "旅舍"
+    },
+    {
+      "key": "LookingGlass.Description",
+      "text": "所有建築被動擁有[RangeModificationParam][Range]"
+    },
+    {
+      "key": "LookingGlass.Name",
+      "text": "望遠鏡"
+    },
+    {
+      "key": "LostCrown.Description",
+      "text": "基礎售價為[MoneyCount]\n@售出時，獲得一個[FavourWizard]"
+    },
+    {
+      "key": "LostCrown.Name",
+      "text": "遺失的王冠"
+    },
+    {
+      "key": "LotteryTicket.Description",
+      "text": "商店中總會有[BaseScore]個卡包[BREAK]效果不會疊加"
+    },
+    {
+      "key": "LotteryTicket.Name",
+      "text": "優惠券"
+    },
+    {
+      "key": "Lumber.Name",
+      "text": "木材"
+    },
+    {
+      "key": "Lumberyard.Description",
+      "text": "{每[Cooldown]週觸發一次：} @在隨機[Adjacent]地格上建立[ActivationCount]個[Lumber][BREAK]只能建立在與[Trees][Adjacent]的位置"
+    },
+    {
+      "key": "Lumberyard.Name",
+      "text": "伐木場"
+    },
+    {
+      "key": "Mace.Description",
+      "text": "每當[TargetCategory1]被移除，{觸發}最多[ActivationCount]個隨機[TargetCategory1]"
+    },
+    {
+      "key": "Mace.Name",
+      "text": "翼形釘頭錘"
+    },
+    {
+      "key": "MagicPortal.Description",
+      "text": "任何[Adjacent]於[MagicPortal]的地塊，都視為[Adjacent]於所有[MagicPortal]"
+    },
+    {
+      "key": "MagicPortal.Name",
+      "text": "傳送門"
+    },
+    {
+      "key": "MagicRuin.Description",
+      "text": "{移除時：}獲得一瓶隨機[Potion]"
+    },
+    {
+      "key": "MagicRuin.Name",
+      "text": "魔法遺跡"
+    },
+    {
+      "key": "Manure.Description",
+      "text": "{移除時觸發：}[MoneyCount]"
+    },
+    {
+      "key": "Manure.Name",
+      "text": "肥料"
+    },
+    {
+      "key": "MarblePillar.Description",
+      "text": "[Statue]現在總會給予得票最多的議員所對應的[CouncilVote]"
+    },
+    {
+      "key": "MarblePillar.Name",
+      "text": "大理石柱"
+    },
+    {
+      "key": "MarketProduce.Description",
+      "text": "[Stall]會因每個其他[Adjacent][Stall]而被動擁有[MultParam]"
+    },
+    {
+      "key": "MarketProduce.Name",
+      "text": "收穫籃"
+    },
+    {
+      "key": "Marketplace.Description",
+      "text": "{每[Cooldown]週觸發一次：} @{Trigger}所有[Adjacent][Stall] [BREAK]{建立時：}獲得一個隨機[Stall][Blueprint]"
+    },
+    {
+      "key": "Marketplace.Name",
+      "text": "市集"
+    },
+    {
+      "key": "Mason.Description",
+      "text": "{建立時觸發：} @獲得[ActivationCount]個隨機[BuildingUpgrade][BREAK]只能建立在另一個非[Nature]建築旁的[Adjacent]位置"
+    },
+    {
+      "key": "Mason.Name",
+      "text": "石匠"
+    },
+    {
+      "key": "Milestone.Name.BigCity",
+      "text": "大城市"
+    },
+    {
+      "key": "Milestone.Name.CapitalCity",
+      "text": "首都"
+    },
+    {
+      "key": "Milestone.Name.Dwelling",
+      "text": "孤立居所"
+    },
+    {
+      "key": "Milestone.Name.Ecumenopolis",
+      "text": "世界城市"
+    },
+    {
+      "key": "Milestone.Name.Hamlet",
+      "text": "小村落"
+    },
+    {
+      "key": "Milestone.Name.LargeTown",
+      "text": "大城鎮"
+    },
+    {
+      "key": "Milestone.Name.Megalopolis",
+      "text": "大都會 {0}"
+    },
+    {
+      "key": "Milestone.Name.Metropolis",
+      "text": "都會 {0}"
+    },
+    {
+      "key": "Milestone.Name.SmallCity",
+      "text": "小城市"
+    },
+    {
+      "key": "Milestone.Name.SmallTown",
+      "text": "小城鎮"
+    },
+    {
+      "key": "Milestone.Name.Village",
+      "text": "雅致村莊"
+    },
+    {
+      "key": "Millstone.Description",
+      "text": "[Common]建築被動擁有[MultParam]"
+    },
+    {
+      "key": "Millstone.Name",
+      "text": "磨坊石"
+    },
+    {
+      "key": "Mine.Description",
+      "text": "{每[Cooldown]週觸發一次：} @在隨機[Adjacent]地塊上建立[ActivationCount]個[Ore][BREAK]只能建立在[Rocks]旁的[Adjacent]位置"
+    },
+    {
+      "key": "Mine.Name",
+      "text": "礦坑"
+    },
+    {
+      "key": "Mirror.Description",
+      "text": "每當建立建築時，有[PercentageChance]的機率在[Adjacent]地塊上建立其複製品"
+    },
+    {
+      "key": "Mirror.Name",
+      "text": "魔鏡"
+    },
+    {
+      "key": "Missive.Description",
+      "text": "售出時，獲得[ActivationCount]個隨機[CouncilVote]（必須有空間）[BREAK]售價為0[Gold]"
+    },
+    {
+      "key": "Missive.Name",
+      "text": "信函"
+    },
+    {
+      "key": "ModelBridge.Description",
+      "text": "每當建立[Resource]時，在與其[Adjacent]的隨機空[Ocean]或[Shore]地塊上建立[Plateau]"
+    },
+    {
+      "key": "ModelBridge.Name",
+      "text": "模型橋"
+    },
+    {
+      "key": "ModifiedSapling.Description",
+      "text": "每當建立[Engineering]時，在最多[ActivationCount]個空的[Adjacent][Grass]與[Sand]地塊上建立隨機空的[Farm]田地"
+    },
+    {
+      "key": "ModifiedSapling.Name",
+      "text": "改良幼苗"
+    },
+    {
+      "key": "MortarAndPestle.Description",
+      "text": "接下來[Cooldown]個[Frontier]建築不受[Range]放置限制"
+    },
+    {
+      "key": "MortarAndPestle.Name",
+      "text": "研缽與杵"
+    },
+    {
+      "key": "MossyLog.Description",
+      "text": "[Lumber]視為[Wild]"
+    },
+    {
+      "key": "MossyLog.Name",
+      "text": "覆苔原木"
+    },
+    {
+      "key": "MoveBuilding.Description",
+      "text": "選取一個建築，然後將其移動到有效的空地塊"
+    },
+    {
+      "key": "MoveBuilding.Name",
+      "text": "移動藥水"
+    },
+    {
+      "key": "MysteryMeat.Description",
+      "text": "[Husbandry]視為[Fishing]"
+    },
+    {
+      "key": "MysteryMeat.Name",
+      "text": "神秘肉"
+    },
+    {
+      "key": "NegBlackPaint.Description",
+      "text": "建立後經過[Cooldown]週，{移除}此建築[BREAK]建築同時只能擁有1種油漆"
+    },
+    {
+      "key": "NegBlackPaint.Name",
+      "text": "深色油漆"
+    },
+    {
+      "key": "NegChangeCount.Description",
+      "text": "建立時，使建築的最大冷卻時間增加[CooldownModificationParam]"
+    },
+    {
+      "key": "NegChangeCount.Name",
+      "text": "增加冷卻"
+    },
+    {
+      "key": "NegChangeMult.Description",
+      "text": "建立時，使一個建築獲得[MultParam]"
+    },
+    {
+      "key": "NegChangeMult.Name",
+      "text": "降低倍率"
+    },
+    {
+      "key": "NegChangeRange.Description",
+      "text": "建立時，使一個建築獲得[RangeModificationParam][Range]"
+    },
+    {
+      "key": "NegChangeRange.Name",
+      "text": "縮小範圍"
+    },
+    {
+      "key": "NestingDoll.Description",
+      "text": "建築可以放置在相同類型的其他建築上。如此操作時，不會取代現有建築，而是使其獲得[MultParam]"
+    },
+    {
+      "key": "NestingDoll.Name",
+      "text": "套娃"
+    },
+    {
+      "key": "Nitrary.Description",
+      "text": "{每[Cooldown]週觸發一次：} @移除[ActivationCount]個[InRange]的隨機[Nature]或[Resource] @[BaseScore]，每個被移除的物件各1份"
+    },
+    {
+      "key": "Nitrary.Name",
+      "text": "硝石床"
+    },
+    {
+      "key": "NomadWagon.Description",
+      "text": "{每[Cooldown]週觸發一次：} @{移除}自身並在[Adjacent]地塊上{建立}一個[NomadWagon]"
+    },
+    {
+      "key": "NomadWagon.Name",
+      "text": "遊牧者馬車"
+    },
+    {
+      "key": "Obelisk.Description",
+      "text": "{被動：}所有[Adjacent]於[Obelisk]的建築獲得[MultParam][BREAK]可以建立在另一個[Obelisk]上，使[Adjacent]建築額外獲得[MultParam]"
+    },
+    {
+      "key": "Obelisk.Name",
+      "text": "方尖碑"
+    },
+    {
+      "key": "OceanTemple.Description",
+      "text": "{每[Cooldown]週觸發一次：} @{建立}[ActivationCount]個[KelpField]於[InRange]內的隨機地格[BREAK]{被動：}位於[InRange]的[Nature]視為[Sacred]"
+    },
+    {
+      "key": "OceanTemple.Name",
+      "text": "海洋神殿"
+    },
+    {
+      "key": "OldBlueprint.Description",
+      "text": "你有[PercentageChance]的額外機率抽到自己持有的[Blueprint]建築"
+    },
+    {
+      "key": "OldBlueprint.Name",
+      "text": "舊藍圖"
+    },
+    {
+      "key": "Ore.Name",
+      "text": "礦石"
+    },
+    {
+      "key": "Outpost.Description",
+      "text": "{每[Cooldown]週觸發一次：} @若一座[Adjacent]建築唯一的其他[Adjacent]建築是[Outpost]，則觸發該建築"
+    },
+    {
+      "key": "Outpost.Name",
+      "text": "前哨站"
+    },
+    {
+      "key": "Overlays.Dropdown",
+      "text": "顯示指定類別的建築"
+    },
+    {
+      "key": "Paintbrush.Description",
+      "text": "[BuildingUpgrade]的塗裝持續時間加倍"
+    },
+    {
+      "key": "Paintbrush.Name",
+      "text": "畫筆"
+    },
+    {
+      "key": "Palette.Description",
+      "text": "出售時，獲得[BsRainbowPaint]和[BsSpectralPaint]（必須留有空間）[BREAK]出售價格為0[Gold]"
+    },
+    {
+      "key": "Palette.Name",
+      "text": "調色盤"
+    },
+    {
+      "key": "Palisade.Description",
+      "text": "{被動：}[Palisade]封閉區域內的所有地格都視為[Frontier]，而非其原本的公會 @不會斜向連接"
+    },
+    {
+      "key": "Palisade.Name",
+      "text": "木柵欄"
+    },
+    {
+      "key": "Park.Description",
+      "text": "{被動：}與[Park][Adjacent]的[Nature]視為[Residence]和[Common]"
+    },
+    {
+      "key": "Park.Name",
+      "text": "公園"
+    },
+    {
+      "key": "PhilosophersStone.Description",
+      "text": "每從建築或傳家寶獲得[MoneyCount]，就獲得[EnchantmentParam]"
+    },
+    {
+      "key": "PhilosophersStone.Name",
+      "text": "賢者之石"
+    },
+    {
+      "key": "PiggyBank.Description",
+      "text": "每從建築或傳家寶獲得[MoneyCount]，最多使[ActivationCount]個隨機[TargetCategory1]獲得[MultParam]"
+    },
+    {
+      "key": "PiggyBank.Name",
+      "text": "小豬撲滿"
+    },
+    {
+      "key": "PirateShip.Description",
+      "text": "{每[Cooldown]週觸發一次：} @[BaseScore]並在[InRange]內的隨機地格上{建立}[ActivationCount]個[TreasureChest]"
+    },
+    {
+      "key": "PirateShip.Name",
+      "text": "海盜船"
+    },
+    {
+      "key": "Pitchfork.Description",
+      "text": "每當[Crop]轉化時，有[PercentageChance]的機率{觸發}一個與其[Adjacent]的隨機建築"
+    },
+    {
+      "key": "Pitchfork.Name",
+      "text": "乾草叉"
+    },
+    {
+      "key": "Plateau.Description",
+      "text": "{被動：}視為[Grass] @可在其上建造"
+    },
+    {
+      "key": "Plateau.Name",
+      "text": "高原"
+    },
+    {
+      "key": "Plaza.Description",
+      "text": "{被動：}與[Plaza][Adjacent]的建築忽略[Range]放置限制"
+    },
+    {
+      "key": "Plaza.Name",
+      "text": "廣場"
+    },
+    {
+      "key": "Plow.Description",
+      "text": "接下來[Cooldown]個[Agricultural]建築不受[Range]放置限制"
+    },
+    {
+      "key": "Plow.Name",
+      "text": "犁"
+    },
+    {
+      "key": "PocketWatch.Description",
+      "text": "所有建築的冷卻時間縮短[CooldownModificationParam]"
+    },
+    {
+      "key": "PocketWatch.Name",
+      "text": "懷錶"
+    },
+    {
+      "key": "PokerChip.Description",
+      "text": "每當使用[Reroll]時，該傳家寶的出售價值增加[BaseScore]"
+    },
+    {
+      "key": "PokerChip.Name",
+      "text": "撲克牌籌碼"
+    },
+    {
+      "key": "Pontoon.Description",
+      "text": "任何能在[Shore]上建立的建築，也能在[Ocean]上建立，反之亦然"
+    },
+    {
+      "key": "Pontoon.Name",
+      "text": "浮橋"
+    },
+    {
+      "key": "Port.Description",
+      "text": "{每[Cooldown]週觸發一次：} @每個位於[InRange]的[Ship]、[Trader]或[Luxury]提供[CategoryScoreShip][BREAK]{建立時：}獲得一張有2次使用次數的[Plateau][Blueprint]"
+    },
+    {
+      "key": "Port.Name",
+      "text": "港口"
+    },
+    {
+      "key": "PostOffice.Description",
+      "text": "{每當[PostOffice]正下方的地格觸發時：} @{觸發}[PostOffice]正上方的地格"
+    },
+    {
+      "key": "PostOffice.Name",
+      "text": "郵局"
+    },
+    {
+      "key": "PotionRack.Description",
+      "text": "出售時，獲得[ActivationCount]個隨機[Potion]（必須留有空間）[BREAK]出售價格為0[Gold]"
+    },
+    {
+      "key": "PotionRack.Name",
+      "text": "藥水架"
+    },
+    {
+      "key": "Pottery.Description",
+      "text": "在[Sand]上建立建築時，使其獲得[MultParam]"
+    },
+    {
+      "key": "Pottery.Name",
+      "text": "陶器"
+    },
+    {
+      "key": "PrayerFlags.Description",
+      "text": "[Trees]視為[Frontier]"
+    },
+    {
+      "key": "PrayerFlags.Name",
+      "text": "祈禱旗"
+    },
+    {
+      "key": "Printer.Description",
+      "text": "每[Cooldown]週，獲得一份隨機持有[Consumable]的複製品（必須留有空間）"
+    },
+    {
+      "key": "Printer.Name",
+      "text": "印刷機"
+    },
+    {
+      "key": "PurplePaint.Description",
+      "text": "接下來[Cooldown]週，目標建築獲得：{每次觸發時，獲得[EnchantmentParam]} [BREAK]建築一次只能擁有1種塗裝"
+    },
+    {
+      "key": "PurplePaint.Name",
+      "text": "紫色塗料"
+    },
+    {
+      "key": "Quarry.Description",
+      "text": "{每[Cooldown]週觸發一次：} @在[InRange]內的隨機地格上建立[ActivationCount]個[Rocks]"
+    },
+    {
+      "key": "Quarry.Name",
+      "text": "採石場"
+    },
+    {
+      "key": "Quay.Description",
+      "text": "其他[Adjacent]建築視為[Ship] @必須與[Port]、[Crane]或另一座[Quay][Connected] @不會斜向連接"
+    },
+    {
+      "key": "Quay.Name",
+      "text": "碼頭"
+    },
+    {
+      "key": "Quest.BuildBlueprints.Description",
+      "text": "本里程碑額外建立[QuestAmount]張不同的[Blueprint]"
+    },
+    {
+      "key": "Quest.CreateBuildings.Description",
+      "text": "本里程碑額外建立[QuestAmount]個建築"
+    },
+    {
+      "key": "Quest.DismissBuildings.Description",
+      "text": "本里程碑額外[Dismiss][DismissCount]個建築"
+    },
+    {
+      "key": "Quest.EarnGold.Description",
+      "text": "本里程碑額外獲得[MoneyCount]"
+    },
+    {
+      "key": "Quest.EarnPointsOfCategory.Description",
+      "text": "本里程碑額外獲得[QuestAmountPoints]分（使用[QuestTargetCategory]）"
+    },
+    {
+      "key": "Quest.IncreaseMult.Description",
+      "text": "本里程碑提高{基礎}[Mult]，套用於[QuestAmount]個不同建築"
+    },
+    {
+      "key": "Quest.RemoveBuildings.Description",
+      "text": "本里程碑額外[Remove][RemoveCount]個建築"
+    },
+    {
+      "key": "Quest.RerollTimes.Description",
+      "text": "本里程碑額外獲得[RerollCount]次[Reroll]"
+    },
+    {
+      "key": "Quest.Reward.RandomLegend",
+      "text": "隨機[Legendary][Heirloom]"
+    },
+    {
+      "key": "Quest.Reward.SkipPack",
+      "text": "[QuestRewardPack]"
+    },
+    {
+      "key": "Quest.TransformBuildings.Description",
+      "text": "本里程碑額外轉化[QuestAmount]個建築"
+    },
+    {
+      "key": "Quest.UseBuildingSupplies.Description",
+      "text": "本里程碑額外使用[QuestAmount]個[BuildingUpgrade]"
+    },
+    {
+      "key": "Quest.UseSpells.Description",
+      "text": "本里程碑額外使用[QuestAmount]瓶[Potion]"
+    },
+    {
+      "key": "RabbitsFoot.Description",
+      "text": "當[TargetCategory1]建築觸發時，有[PercentageChance]的機率獲得[MultParam]，以及[Percentage2Chance]的機率獲得[MoneyCount]"
+    },
+    {
+      "key": "RabbitsFoot.Name",
+      "text": "兔腳"
+    },
+    {
+      "key": "Rail.Description",
+      "text": "{被動：}任何與[Rail][Adjacent]的地格，都視為與所有[Connected][Rail][Adjacent] @不會斜向連接"
+    },
+    {
+      "key": "Rail.Name",
+      "text": "鐵路"
+    },
+    {
+      "key": "RainbowFlag.Description",
+      "text": "你的建築抽取結果可以包含來自任何已解鎖公會的建築 "
+    },
+    {
+      "key": "RainbowFlag.Name",
+      "text": "彩虹旗"
+    },
+    {
+      "key": "RainbowPaint.Description",
+      "text": "目標建築永久獲得[Wild]，使其同時算作所有類別和公會[BREAK][Wild]建築不會從[CouncilVote]獲得[Mult][BREAK]建築一次只能擁有1種塗裝"
+    },
+    {
+      "key": "RainbowPaint.Name",
+      "text": "彩虹塗料"
+    },
+    {
+      "key": "Rank0ExplorerData.Description",
+      "text": "基礎難度"
+    },
+    {
+      "key": "Rank0ExplorerData.Name",
+      "text": "探險家"
+    },
+    {
+      "key": "Rank10RegentData.Description",
+      "text": "村莊之後，每第2個里程碑會生成一個[Hazard]"
+    },
+    {
+      "key": "Rank10RegentData.Name",
+      "text": "攝政王"
+    },
+    {
+      "key": "Rank1VillagerData.Description",
+      "text": "完成里程碑時獲得較少[Gold]"
+    },
+    {
+      "key": "Rank1VillagerData.Name",
+      "text": "村民"
+    },
+    {
+      "key": "Rank2YeomanData.Description",
+      "text": "所需分數提升得更快"
+    },
+    {
+      "key": "Rank2YeomanData.Name",
+      "text": "自耕農"
+    },
+    {
+      "key": "Rank3CitizenData.Description",
+      "text": "在雅致村莊中會生成一個[Hazard]"
+    },
+    {
+      "key": "Rank3CitizenData.Name",
+      "text": "公民"
+    },
+    {
+      "key": "Rank4EnvoyData.Description",
+      "text": "建築抽取結果可能帶有[BsNegCooldown]"
+    },
+    {
+      "key": "Rank4EnvoyData.Name",
+      "text": "使節"
+    },
+    {
+      "key": "Rank5ConsulData.Description",
+      "text": "建築抽取結果可能帶有[BsNegRange]"
+    },
+    {
+      "key": "Rank5ConsulData.Name",
+      "text": "領事"
+    },
+    {
+      "key": "Rank6AmbassadorData.Description",
+      "text": "[Reroll]、[Remove]和[Dismiss]起始費用提高"
+    },
+    {
+      "key": "Rank6AmbassadorData.Name",
+      "text": "大使"
+    },
+    {
+      "key": "Rank7GovenorData.Description",
+      "text": "所需分數提升得更快"
+    },
+    {
+      "key": "Rank7GovenorData.Name",
+      "text": "總督"
+    },
+    {
+      "key": "Rank8ChancellorData.Description",
+      "text": "建築抽取結果可能帶有[BsNegBlackPaint]"
+    },
+    {
+      "key": "Rank8ChancellorData.Name",
+      "text": "大臣"
+    },
+    {
+      "key": "Rank9ViceroyData.Description",
+      "text": "建築抽取結果可能帶有-0.5[mult]"
+    },
+    {
+      "key": "Rank9ViceroyData.Name",
+      "text": "總督代理"
+    },
+    {
+      "key": "RanksUnlockData.Description",
+      "text": "{Ranks}已解鎖。階級允許你選擇更高難度 @ @{rank}每當你在已解鎖的最高階級中贏得一局遊戲時就會提升"
+    },
+    {
+      "key": "RareHerb.Description",
+      "text": "每當[HerbGarden]觸發[ActivationCount]個或更多其他建築時，使被觸發的建築獲得[MultParam]"
+    },
+    {
+      "key": "RareHerb.Name",
+      "text": "生命草藥"
+    },
+    {
+      "key": "Rarity.Common.Name",
+      "text": "普通"
+    },
+    {
+      "key": "Rarity.Legendary.Name",
+      "text": "傳奇"
+    },
+    {
+      "key": "Rarity.Masterwork.Name",
+      "text": "精工"
+    },
+    {
+      "key": "Rarity.Rare.Name",
+      "text": "稀有"
+    },
+    {
+      "key": "Rarity.Uncommon.Name",
+      "text": "非凡"
+    },
+    {
+      "key": "RedEarth.Description",
+      "text": "[Wall]視為[Martial]，且可放置於[Sand]上"
+    },
+    {
+      "key": "RedEarth.Name",
+      "text": "紅土"
+    },
+    {
+      "key": "RedPaint.Description",
+      "text": "接下來[Cooldown]週，目標建築獲得：{每次觸發時，獲得[RemoveCount]} [BREAK]建築一次只能擁有1種塗裝"
+    },
+    {
+      "key": "RedPaint.Name",
+      "text": "紅色塗料"
+    },
+    {
+      "key": "Reliquary.Description",
+      "text": "{每[Cooldown]週觸發一次：} @[BaseScore]（30 × 所有已裝備[Heirloom]的出售價值總和）[BREAK]只能建立於[Adjacent][Rocks]的位置"
+    },
+    {
+      "key": "Reliquary.Name",
+      "text": "聖物匣"
+    },
+    {
+      "key": "RemoveToGainRarity.Description",
+      "text": "移除目標建築，並獲得一個更高稀有度的隨機[Blueprint]"
+    },
+    {
+      "key": "RemoveToGainRarity.Name",
+      "text": "回收藥水"
+    },
+    {
+      "key": "Reservoir.Description",
+      "text": "{建立時觸發：}獲得[Irrigation] [Blueprint][BREAK]與[Reservoir][Adjacent]的[Crop]會在1週內生長"
+    },
+    {
+      "key": "Reservoir.Name",
+      "text": "蓄水池"
+    },
+    {
+      "key": "Rocks.Name",
+      "text": "岩石"
+    },
+    {
+      "key": "Ruin.Description",
+      "text": "{移除時：}獲得一個隨機[BuildingUpgrade]"
+    },
+    {
+      "key": "Ruin.Name",
+      "text": "遺跡"
+    },
+    {
+      "key": "RustedBlade.Description",
+      "text": "每個里程碑可觸發[Cooldown]次，每當你{移除}一座建築時，獲得該建築的[Blueprint]（必須有空位）"
+    },
+    {
+      "key": "RustedBlade.Name",
+      "text": "鏽蝕之刃"
+    },
+    {
+      "key": "Saddle.Description",
+      "text": "任何位於[Stable]的[InRange]內的地格，都視為位於所有[Stable]的[InRange]內"
+    },
+    {
+      "key": "Saddle.Name",
+      "text": "信使馬鞍"
+    },
+    {
+      "key": "Saw.Description",
+      "text": "每當[Trees]被移除時，獲得一張[Palisade] [Blueprint]（必須有空位）[BREAK]由[Saw]取得的[Blueprint]只有1次使用次數"
+    },
+    {
+      "key": "Saw.Name",
+      "text": "伐木鋸"
+    },
+    {
+      "key": "Sawmill.Description",
+      "text": "{每[Cooldown]週觸發：@{觸發}最多[ActivationCount]個位於[InRange]的[Engineering]或[Manufacturer][BREAK]{被動：}移除[Adjacent]的[Lumber]，使可影響的目標數增加[BaseScore]"
+    },
+    {
+      "key": "Sawmill.Name",
+      "text": "鋸木廠"
+    },
+    {
+      "key": "Scaffolding.Description",
+      "text": "{被動：}在[Scaffolding]上建造的任何建築都獲得[MultParam] @可在其上方建造"
+    },
+    {
+      "key": "Scaffolding.Name",
+      "text": "鷹架"
+    },
+    {
+      "key": "Scarecrow.Description",
+      "text": "{每[Cooldown]週觸發：} @每個位於[InRange]的[Farm]提供[CategoryScoreFarm]"
+    },
+    {
+      "key": "Scarecrow.Name",
+      "text": "稻草人"
+    },
+    {
+      "key": "Scythe.Description",
+      "text": "放置[Farm]時，額外放置1個"
+    },
+    {
+      "key": "Scythe.Name",
+      "text": "鐮刀"
+    },
+    {
+      "key": "SeaweedFarm.Description",
+      "text": "{每[Cooldown]週觸發：} @每個位於[InRange]的空[Ocean]提供[TileTypeScoreOcean]"
+    },
+    {
+      "key": "SeaweedFarm.Name",
+      "text": "海藻農場"
+    },
+    {
+      "key": "Sewer.Description",
+      "text": "{建立時觸發：} @{移除}所有[Adjacent]的非[Infrastructure]"
+    },
+    {
+      "key": "Sewer.Name",
+      "text": "下水道"
+    },
+    {
+      "key": "Shaman.Description",
+      "text": "{當另一座建築在[InRange]獲得[Reroll]時：}@每個位於[InRange]的[Frontier]提供[CategoryScoreFrontier]"
+    },
+    {
+      "key": "Shaman.Name",
+      "text": "薩滿"
+    },
+    {
+      "key": "ShantyTown.Description",
+      "text": "{被動：}每週，每個[Connected]的[ShantyTown]有[PercentageChance]機率在隨機地塊上建立另一個[ShantyTown]，該地塊與該群組[Connected]相連"
+    },
+    {
+      "key": "ShantyTown.Name",
+      "text": "貧民窟"
+    },
+    {
+      "key": "Shears.Description",
+      "text": "每當一座建築被移除時，有[PercentageChance]機率獲得[MoneyCount]"
+    },
+    {
+      "key": "Shears.Name",
+      "text": "剪刀"
+    },
+    {
+      "key": "SheepFarm.Description",
+      "text": "{建立時觸發：} @每個[Adjacent]的空[Grass]提供[TileTypeScoreGrass] @{建立}[Manure]於隨機空的[Adjacent] [Grass]上"
+    },
+    {
+      "key": "SheepFarm.Name",
+      "text": "牧羊場"
+    },
+    {
+      "key": "ShopUnlockData.Description",
+      "text": "{商店}已修復，現在在里程碑之間都會一直開放"
+    },
+    {
+      "key": "Shrine.Description",
+      "text": "{每[Cooldown]週觸發：}@[BaseScore]（50×[Reroll]數量）[BREAK]只能建立於至少3個[Nature]都與其[Adjacent]的位置"
+    },
+    {
+      "key": "Shrine.Name",
+      "text": "神殿"
+    },
+    {
+      "key": "Silk.Description",
+      "text": "當[Marketplace]觸發時，會以地圖上所有與任一[Marketplace][Adjacent]的[Stall]為目標"
+    },
+    {
+      "key": "Silk.Name",
+      "text": "絲綢卷"
+    },
+    {
+      "key": "SkipUnlockData.Description",
+      "text": "現在可以從{Tiny Hamlet}開始，花費[Gold]跳過建築"
+    },
+    {
+      "key": "Sledgehammer.Description",
+      "text": "每當一座具有提高[Mult]的建築被移除時，在其位置建立[Scaffolding]"
+    },
+    {
+      "key": "Sledgehammer.Name",
+      "text": "大錘"
+    },
+    {
+      "key": "SlotMachine.Description",
+      "text": "每個里程碑開始時，獲得[RerollCount]和[RemoveCount]"
+    },
+    {
+      "key": "SlotMachine.Name",
+      "text": "拉霸機"
+    },
+    {
+      "key": "Smelter.Description",
+      "text": "{每[Cooldown]週觸發：[BaseScore][BREAK]{被動：}移除[Adjacent]的[Ore]以獲得[MultParam]"
+    },
+    {
+      "key": "Smelter.Name",
+      "text": "冶煉爐"
+    },
+    {
+      "key": "SparringYard.Description",
+      "text": "{建立時觸發：} @[RemoveCount]並{觸發}所有位於[InRange]的[Training]"
+    },
+    {
+      "key": "SparringYard.Name",
+      "text": "練習假人"
+    },
+    {
+      "key": "SpecialConsumable.Dismiss.Description",
+      "text": "從可用建築池中棄置一座建築。在本輪剩餘時間內都不會再提供該建築"
+    },
+    {
+      "key": "SpecialConsumable.Remove.Description",
+      "text": "從地圖上移除一座建築，觸發移除效果"
+    },
+    {
+      "key": "SpecialConsumable.Reroll.Description",
+      "text": "重新整理目前的建築選項"
+    },
+    {
+      "key": "SpectralPaint.Description",
+      "text": "永久修改目標建築所影響的類別，改為你選擇的類別[BREAK]只能選擇地圖上已存在的新類別[BREAK]每座建築同時只能有1種塗料"
+    },
+    {
+      "key": "SpectralPaint.Name",
+      "text": "幽靈塗料"
+    },
+    {
+      "key": "SpellsUnlockData.Description",
+      "text": "[Potion]現在可以出現在商店或卡包中 @這些[Consumable]是一次性使用的實用物品，具有各種效果"
+    },
+    {
+      "key": "Stable.Description",
+      "text": "{被動：}與[Stable][Adjacent]的建築獲得[Stable]的[Range] @不適用於其他[Adjacent] [Stable]"
+    },
+    {
+      "key": "Stable.Name",
+      "text": "馬廄"
+    },
+    {
+      "key": "StallBotany.Description",
+      "text": "{建立時觸發：} @[CategoryScoreNature]，每個[Nature]或[Resource][InRange]可獲得一次"
+    },
+    {
+      "key": "StallBotany.Name",
+      "text": "植物學家攤位"
+    },
+    {
+      "key": "StallDeli.Description",
+      "text": "{建立時觸發：} @[CategoryScoreHusbandry]，每個[Husbandry]、[Fishing]或[Healing][InRange]可獲得一次"
+    },
+    {
+      "key": "StallDeli.Name",
+      "text": "熟食攤位"
+    },
+    {
+      "key": "StallGrocer.Description",
+      "text": "{建立時觸發：} @[CategoryScoreFarm]，每個[Farm]、[Crop]或[Residence][InRange]可獲得一次"
+    },
+    {
+      "key": "StallGrocer.Name",
+      "text": "雜貨攤位"
+    },
+    {
+      "key": "StallSupplies.Description",
+      "text": "{建立時觸發：} @[CategoryScoreManufacturer]，每個[Manufacturer]、[Training]或[Engineering][InRange]可獲得一次"
+    },
+    {
+      "key": "StallSupplies.Name",
+      "text": "物資攤位"
+    },
+    {
+      "key": "Standard.Description",
+      "text": "[Wall]不再提供原本的[Mult]，改為每有[ActivationCount]個被[Wall]包圍的地格就提供[MultParam] "
+    },
+    {
+      "key": "Standard.Name",
+      "text": "三角旗"
+    },
+    {
+      "key": "Statue.Description",
+      "text": "{建立時觸發：} @為議會中已有的[ActivationCount]名隨機議員各獲得一張[CouncilVote][BREAK]只能建立在與[Nature][Adjacent]的位置"
+    },
+    {
+      "key": "Statue.Name",
+      "text": "雕像"
+    },
+    {
+      "key": "Statuette.Description",
+      "text": "當一座建築被{建立}時，如果你有議員能為其任一類別提供[Mult]，則有[PercentageChance]機率獲得該議員的[CouncilVote]"
+    },
+    {
+      "key": "Statuette.Name",
+      "text": "小雕像"
+    },
+    {
+      "key": "Stockpile.Description",
+      "text": "{建立時觸發：} @[TileTypeScoreSand]，每個空的[Sand]或[Grass][InRange]可獲得一次 "
+    },
+    {
+      "key": "Stockpile.Name",
+      "text": "儲藏堆"
+    },
+    {
+      "key": "StringProcessor.HazardRemovalCondition",
+      "text": "[BREAK]需要[RemoveCount]和[MoneyCount]才能移除"
+    },
+    {
+      "key": "StringProcessor.LimitedTriggersContext",
+      "text": "[BREAK]每週最多只能<b>觸發</b>{0}次"
+    },
+    {
+      "key": "StringProcessor.MultiplePlacement",
+      "text": "[BREAK]你一次最多可以放置{0}個[{1}]"
+    },
+    {
+      "key": "StringProcessor.NextVoteEffectContext",
+      "text": "[BREAK]<b>下一個</b><b>投票</b><b>效果：</b>{0}"
+    },
+    {
+      "key": "StringProcessor.VariableTargets",
+      "text": "[BREAK]這件[Heirloom]每次出現時，都會有不同的目標類別"
+    },
+    {
+      "key": "Sundial.Description",
+      "text": "在里程碑的最後一週，所有建築都會被動獲得[MultParam]"
+    },
+    {
+      "key": "Sundial.Name",
+      "text": "日晷"
+    },
+    {
+      "key": "SunflowerFarm.Description",
+      "text": "{生長}（轉化）[Cooldown]週後，接著： @{每[Cooldown]週觸發：} @每個其他位於[InRange]的[Crop]提供[CategoryScoreCrop][BREAK]{被動：}視為[Flowers]"
+    },
+    {
+      "key": "SunflowerFarm.Name",
+      "text": "向日葵田"
+    },
+    {
+      "key": "Talisman.Description",
+      "text": "每當一座建築建立時，若它與另一座不同且非[Neutral]公會的建築[Adjacent]，獲得[MoneyCount]"
+    },
+    {
+      "key": "Talisman.Name",
+      "text": "護身符"
+    },
+    {
+      "key": "Tannery.Description",
+      "text": "{每[Cooldown]週觸發：} @每個位於[InRange]的[Husbandry]提供[CategoryScoreHusbandry]"
+    },
+    {
+      "key": "Tannery.Name",
+      "text": "皮革廠"
+    },
+    {
+      "key": "TaxCollector.Description",
+      "text": "{每[Cooldown]週觸發：} @{轉化}[ActivationCount]個位於[InRange]的隨機[House]為[HousePlot]"
+    },
+    {
+      "key": "TaxCollector.Name",
+      "text": "稅吏"
+    },
+    {
+      "key": "Temple.Description",
+      "text": "當神殿的4個翼殿都在正確位置彼此[Adjacent]建立時，獲得一件特殊的[Legendary][Heirloom][BREAK]無法移除"
+    },
+    {
+      "key": "TempleEastWing.Name",
+      "text": "神殿東北翼殿"
+    },
+    {
+      "key": "TempleNorthWing.Name",
+      "text": "神殿西北翼殿"
+    },
+    {
+      "key": "TempleSouthWing.Name",
+      "text": "神殿東南翼殿"
+    },
+    {
+      "key": "TempleWestWing.Name",
+      "text": "神殿西南翼殿"
+    },
+    {
+      "key": "TileType.Grass.Name",
+      "text": "地面"
+    },
+    {
+      "key": "TileType.Ocean.Name",
+      "text": "海洋"
+    },
+    {
+      "key": "TileType.Sand.Name",
+      "text": "沙地"
+    },
+    {
+      "key": "TileType.Shore.Name",
+      "text": "海岸線"
+    },
+    {
+      "key": "ToolShed.Description",
+      "text": "{當[Resource]在[InRange]建立時：} @每個位於[InRange]的[Engineering]、[Woodworking]或[Resource]提供[CategoryScoreEngineering]"
+    },
+    {
+      "key": "ToolShed.Name",
+      "text": "工具棚"
+    },
+    {
+      "key": "TopHat.Description",
+      "text": "你可以在商店和卡包中找到重複的[Heirloom]"
+    },
+    {
+      "key": "TopHat.Name",
+      "text": "高禮帽"
+    },
+    {
+      "key": "Torch.Description",
+      "text": "每當[EffigyPyre]被移除時，在隨機地塊上建立另一個[EffigyPyre]，該地塊與其[Adjacent]相鄰"
+    },
+    {
+      "key": "Torch.Name",
+      "text": "火焰烙印"
+    },
+    {
+      "key": "TownBell.Description",
+      "text": "{被動：}與[TownBell][Adjacent]的建築具有[RangeModificationParam] [Range]"
+    },
+    {
+      "key": "TownBell.Name",
+      "text": "城鎮鐘"
+    },
+    {
+      "key": "TownHall.Description",
+      "text": "{建立時觸發：} @每個與[TownHall][Connected]的[Residence]提供[CategoryScoreResidence]"
+    },
+    {
+      "key": "TownHall.Name",
+      "text": "市政廳"
+    },
+    {
+      "key": "ToyBoat.Description",
+      "text": "每當[Ship]觸發時，它會移除自身，並在與其[Adjacent]的隨機地格建立一個複製品"
+    },
+    {
+      "key": "ToyBoat.Name",
+      "text": "玩具帆船"
+    },
+    {
+      "key": "TradingPost.Description",
+      "text": "{每[Cooldown]週觸發：} @每座位於[InRange]的不同建築提供[BaseScore]"
+    },
+    {
+      "key": "TradingPost.Name",
+      "text": "貿易站"
+    },
+    {
+      "key": "TrainingRing.Description",
+      "text": "{建立時觸發：} @每個位於[InRange]的空[Sand]提供[TileTypeScoreSand]"
+    },
+    {
+      "key": "TrainingRing.Name",
+      "text": "訓練場"
+    },
+    {
+      "key": "Transmutor.Description",
+      "text": "如果即將放置超過[ActivationCount]座建築，則額外放置[ActivationCount]座"
+    },
+    {
+      "key": "Transmutor.Name",
+      "text": "變異師"
+    },
+    {
+      "key": "Trapper.Description",
+      "text": "{被動：}其他[Adjacent]建築視為[Husbandry]"
+    },
+    {
+      "key": "Trapper.Name",
+      "text": "捕獸者小屋"
+    },
+    {
+      "key": "Trawler.Description",
+      "text": "{每[Cooldown]週：} @{觸發}[ActivationCount]個位於[InRange]的隨機[Fishing] @必須至少與[Grass]或[Sand]相隔2格建立"
+    },
+    {
+      "key": "Trawler.Name",
+      "text": "拖網船"
+    },
+    {
+      "key": "TreasureChest.Description",
+      "text": "{移除時觸發：}[MoneyCount]"
+    },
+    {
+      "key": "TreasureChest.Name",
+      "text": "寶箱"
+    },
+    {
+      "key": "TreasureMap.Description",
+      "text": "出售時，{建立}[ActivationCount]個[TreasureChest]於隨機[Sand]地格上[BREAK]售價為0[Gold]"
+    },
+    {
+      "key": "TreasureMap.Name",
+      "text": "藏寶圖"
+    },
+    {
+      "key": "Treasury.Description",
+      "text": "{當另一座[InRange]建築獲得[Gold]時觸發：} @{觸發}[ActivationCount]座隨機[Adjacent]建築"
+    },
+    {
+      "key": "Treasury.Name",
+      "text": "金庫"
+    },
+    {
+      "key": "Trees.Name",
+      "text": "森林"
+    },
+    {
+      "key": "Trigger.Description",
+      "text": "{觸發}目標建築，不結束本週[BREAK]不計入建築每週觸發上限"
+    },
+    {
+      "key": "Trigger.Name",
+      "text": "觸發藥劑"
+    },
+    {
+      "key": "Triquetra.Description",
+      "text": "每當建立[Nature]時，觸發其[Adjacent]的一座隨機建築"
+    },
+    {
+      "key": "Triquetra.Name",
+      "text": "三相結"
+    },
+    {
+      "key": "UI.Canvas.CreditsPanel.Title",
+      "text": "製作人員"
+    },
+    {
+      "key": "UI.Canvas.DebugSpawner.Title",
+      "text": "除錯生成器"
+    },
+    {
+      "key": "UI.Canvas.EndingScreen.Desc",
+      "text": "你確實建立了一座足以與所有城市匹敵的城市。\n你可以繼續在無盡模式中遊玩\n但從此之後，遊戲可能會以繽紛而在意料之中的方式\n開始出錯。"
+    },
+    {
+      "key": "UI.Canvas.EndingScreen.Lose",
+      "text": "週數耗盡"
+    },
+    {
+      "key": "UI.Canvas.EndingScreen.Win",
+      "text": "無盡勝利！"
+    },
+    {
+      "key": "UI.Canvas.GuildLoadoutInfoPanel.BuildingsTitle",
+      "text": "建築"
+    },
+    {
+      "key": "UI.Canvas.GuildLoadoutInfoPanel.HeirloomsTitle",
+      "text": "傳家寶"
+    },
+    {
+      "key": "UI.Canvas.MainMenu.PlayButton",
+      "text": "開始新局"
+    },
+    {
+      "key": "UI.Canvas.OptionsMenu.Title",
+      "text": "選項"
+    },
+    {
+      "key": "UI.Canvas.ScorePanel.CompleteEarlyButton.Text",
+      "text": "提前完成里程碑"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.AmbienceVolumeLabel",
+      "text": "環境音量"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.DebugMenu",
+      "text": "除錯選單"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.GameSpeedLabel",
+      "text": "遊戲速度"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.MasterVolumeLabel",
+      "text": "主音量"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.MusicVolumeLabel",
+      "text": "音樂音量"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.ResetProgress",
+      "text": "重設進度"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.ResolutionLabel",
+      "text": "解析度"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.RunInBackground",
+      "text": "在背景執行"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.Screenshake",
+      "text": "畫面震動"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.SfxVolumeLabel",
+      "text": "音效音量"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.StretchDisplay",
+      "text": "延展顯示"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.Title",
+      "text": "設定"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.VsyncLabel",
+      "text": "垂直同步"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.WindowModeBorderless",
+      "text": "無邊框"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.WindowModeFullscreen",
+      "text": "全螢幕"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.WindowModeLabel",
+      "text": "視窗模式"
+    },
+    {
+      "key": "UI.Canvas.SettingsMenu.WindowModeWindowed",
+      "text": "視窗化"
+    },
+    {
+      "key": "UI.Canvas.StartingSelectScreen.Randomize",
+      "text": "隨機公會"
+    },
+    {
+      "key": "UI.Compendium.AllUnlock",
+      "text": "全部解鎖"
+    },
+    {
+      "key": "UI.Compendium.BuildingsButton",
+      "text": "建築"
+    },
+    {
+      "key": "UI.Compendium.ConsumablesButton",
+      "text": "消耗品"
+    },
+    {
+      "key": "UI.Compendium.CouncillorsButton",
+      "text": "議員"
+    },
+    {
+      "key": "UI.Compendium.CurrentRun",
+      "text": "僅限目前局"
+    },
+    {
+      "key": "UI.Compendium.HeirloomsButton",
+      "text": "傳家寶"
+    },
+    {
+      "key": "UI.Compendium.Title",
+      "text": "圖鑑"
+    },
+    {
+      "key": "UI.Generic.Loading",
+      "text": "載入中…"
+    },
+    {
+      "key": "UI.Generic.Saving",
+      "text": "儲存中…"
+    },
+    {
+      "key": "Ui.AutoCompleteMilestone",
+      "text": "自動完成里程碑"
+    },
+    {
+      "key": "Ui.BuildableOnPrefix",
+      "text": "可建立於："
+    },
+    {
+      "key": "Ui.BuildingChoiceBar.SkipRemaining",
+      "text": "跳過剩餘項目"
+    },
+    {
+      "key": "Ui.Button.Bribe",
+      "text": "支付賄賂 @{0}[Gold]"
+    },
+    {
+      "key": "Ui.CantBeActivated.Description",
+      "text": "無法由其他事物觸發"
+    },
+    {
+      "key": "Ui.Canvas.EndingScreen.BestWeek",
+      "text": "最佳週數"
+    },
+    {
+      "key": "Ui.Canvas.EndingScreen.CouncilVotes",
+      "text": "最高票數"
+    },
+    {
+      "key": "Ui.Canvas.EndingScreen.FavGuild",
+      "text": "最愛公會"
+    },
+    {
+      "key": "Ui.Canvas.EndingScreen.GoldEarned",
+      "text": "獲得金幣"
+    },
+    {
+      "key": "Ui.Canvas.EndingScreen.MilestoneReached",
+      "text": "達成里程碑"
+    },
+    {
+      "key": "Ui.CityCouncilPanel.Title",
+      "text": "城市議會"
+    },
+    {
+      "key": "Ui.CouncilFavour.EffectHeader",
+      "text": "票數對應效果[BREAK]"
+    },
+    {
+      "key": "Ui.CouncilFavourVotes.Count",
+      "text": "{0}票"
+    },
+    {
+      "key": "Ui.CouncilRequests.Title",
+      "text": "議會請求： "
+    },
+    {
+      "key": "Ui.CurrentRank",
+      "text": "目前階級：{0}"
+    },
+    {
+      "key": "Ui.Debug.LevelUpAllButton",
+      "text": "將所有已解鎖公會升至最高等級"
+    },
+    {
+      "key": "Ui.Debug.MaxAllUnlockedGuilds",
+      "text": "確定要將所有已解鎖公會設為最高等級嗎？（不建議初次遊玩者使用）"
+    },
+    {
+      "key": "Ui.Debug.UnlockAllButton",
+      "text": "解鎖所有公會"
+    },
+    {
+      "key": "Ui.Debug.UnlockAllGuilds",
+      "text": "確定要將所有公會以0級解鎖嗎？（不建議初次遊玩者使用）"
+    },
+    {
+      "key": "Ui.ExtraInfo.LmbSell",
+      "text": "按[LMB]出售"
+    },
+    {
+      "key": "Ui.ExtraInfo.LmbShowAdjacency",
+      "text": "按[LMB]顯示[Adjacency]"
+    },
+    {
+      "key": "Ui.ExtraInfo.LmbShowRange",
+      "text": "按[LMB]顯示[Range]"
+    },
+    {
+      "key": "Ui.ExtraInfo.LmbShowRangeAndAdjacency",
+      "text": "按[LMB]顯示[Range]＋[Adjacency]"
+    },
+    {
+      "key": "Ui.ExtraInfo.LmbUseOrSell",
+      "text": "按[LMB]使用或出售"
+    },
+    {
+      "key": "Ui.ExtraInfo.RmbExtraInfo",
+      "text": "按[RMB]查看詳細資訊"
+    },
+    {
+      "key": "Ui.FailedToReachTargetExtraWeek",
+      "text": "未達成目標@額外增加1週"
+    },
+    {
+      "key": "Ui.FeedbackMessage",
+      "text": "按F7提交意見回饋"
+    },
+    {
+      "key": "Ui.Generic.AbandonRun",
+      "text": "放棄本局"
+    },
+    {
+      "key": "Ui.Generic.Apply",
+      "text": "套用"
+    },
+    {
+      "key": "Ui.Generic.Back",
+      "text": "返回"
+    },
+    {
+      "key": "Ui.Generic.Cancel",
+      "text": "取消"
+    },
+    {
+      "key": "Ui.Generic.Confirm",
+      "text": "確認"
+    },
+    {
+      "key": "Ui.Generic.Continue",
+      "text": "繼續"
+    },
+    {
+      "key": "Ui.Generic.Council",
+      "text": "議會"
+    },
+    {
+      "key": "Ui.Generic.Defeat",
+      "text": "敗北"
+    },
+    {
+      "key": "Ui.Generic.Done",
+      "text": "完成"
+    },
+    {
+      "key": "Ui.Generic.Enter",
+      "text": "進入"
+    },
+    {
+      "key": "Ui.Generic.GuildProgress",
+      "text": "公會進度"
+    },
+    {
+      "key": "Ui.Generic.MainMenu",
+      "text": "主選單"
+    },
+    {
+      "key": "Ui.Generic.Next",
+      "text": "下一步"
+    },
+    {
+      "key": "Ui.Generic.Quit",
+      "text": "離開"
+    },
+    {
+      "key": "Ui.Generic.Refresh",
+      "text": "重新整理"
+    },
+    {
+      "key": "Ui.Generic.Restart",
+      "text": "開始新局"
+    },
+    {
+      "key": "Ui.Generic.Sell",
+      "text": "出售"
+    },
+    {
+      "key": "Ui.Generic.Skip",
+      "text": "跳過"
+    },
+    {
+      "key": "Ui.Generic.Total",
+      "text": "總計"
+    },
+    {
+      "key": "Ui.Generic.Use",
+      "text": "使用"
+    },
+    {
+      "key": "Ui.Generic.ViewMap",
+      "text": "查看地圖"
+    },
+    {
+      "key": "Ui.HighestRank",
+      "text": "最高階級："
+    },
+    {
+      "key": "Ui.LevelWithNumber",
+      "text": "等級{0}"
+    },
+    {
+      "key": "Ui.LowerButtons.ShowPackOptions",
+      "text": "顯示選項"
+    },
+    {
+      "key": "Ui.LowerButtons.ShowRequests",
+      "text": "顯示請求"
+    },
+    {
+      "key": "Ui.LowerButtons.ShowShop",
+      "text": "顯示商店"
+    },
+    {
+      "key": "Ui.MaxLevel",
+      "text": "最高等級"
+    },
+    {
+      "key": "Ui.MessageDialog.ConfirmAbandon",
+      "text": "放棄目前局？這會計為失敗。"
+    },
+    {
+      "key": "Ui.MessageDialog.ConfirmMainMenu",
+      "text": "返回主選單？目前里程碑開始後的所有進度都會遺失。"
+    },
+    {
+      "key": "Ui.MessageDialog.ConfirmReset",
+      "text": "確定要重設存檔嗎？你將失去所有已解鎖的進度。"
+    },
+    {
+      "key": "Ui.MessageDialog.ConfirmRestart",
+      "text": "開始新局？目前進行中的一局的所有進度都會遺失。"
+    },
+    {
+      "key": "Ui.MessagePanel.EndlessDesc",
+      "text": "@在無盡模式中，你會以0金幣開始，且只會顯示建築總數，以節省計分時間。@在無盡模式中，你也不會再為公會獲得額外經驗。@你能走多遠？"
+    },
+    {
+      "key": "Ui.MessagePanel.EndlessTitle",
+      "text": "歡迎來到無盡模式"
+    },
+    {
+      "key": "Ui.MessagePanel.IntroDesc",
+      "text": "高階議會恭喜你在新島嶼聚落上動工！@@達成人口目標，讓你的城鎮發展成繁榮的大都會。@@祝你好運"
+    },
+    {
+      "key": "Ui.MessagePanel.IntroSigned",
+      "text": "首席議員"
+    },
+    {
+      "key": "Ui.MessagePanel.IntroTitle",
+      "text": "致新任總督"
+    },
+    {
+      "key": "Ui.MilestoneCompletion.NewMilestoneReached",
+      "text": "達成新里程碑"
+    },
+    {
+      "key": "Ui.MilestoneCompletionScore.Completed",
+      "text": "里程碑完成"
+    },
+    {
+      "key": "Ui.MilestoneCompletionScore.RequestCompleted",
+      "text": "請求完成"
+    },
+    {
+      "key": "Ui.MilestoneCompletionScore.RequestFailed",
+      "text": "請求失敗"
+    },
+    {
+      "key": "Ui.MilestoneCompletionScore.Title",
+      "text": "里程碑分數"
+    },
+    {
+      "key": "Ui.MilestoneCompletionScore.WeeksEarly",
+      "text": "提前週數"
+    },
+    {
+      "key": "Ui.MilestoneReward.BuildingChoices",
+      "text": "+{0} 每週建築選擇"
+    },
+    {
+      "key": "Ui.MilestoneReward.Completed",
+      "text": "{0}：里程碑完成"
+    },
+    {
+      "key": "Ui.MilestoneReward.Dismisses",
+      "text": "{0}：棄置"
+    },
+    {
+      "key": "Ui.MilestoneReward.GoldenHorseshoe",
+      "text": "{0}：金色馬蹄鐵"
+    },
+    {
+      "key": "Ui.MilestoneReward.GuildLevel10",
+      "text": "{1}：{0}最高等級"
+    },
+    {
+      "key": "Ui.MilestoneReward.GuildLevel5",
+      "text": "{1}：{0}等級5"
+    },
+    {
+      "key": "Ui.MilestoneReward.Removes",
+      "text": "{0}：移除"
+    },
+    {
+      "key": "Ui.MilestoneReward.Rerolls",
+      "text": "{0}：重擲"
+    },
+    {
+      "key": "Ui.MilestoneReward.WeeksEarly",
+      "text": "{0}：提前週數"
+    },
+    {
+      "key": "Ui.NewHazardSpawned",
+      "text": "新的危害出現"
+    },
+    {
+      "key": "Ui.Notification.NewVote",
+      "text": "{0} {1}票"
+    },
+    {
+      "key": "Ui.Overlays.Button",
+      "text": "覆蓋資訊"
+    },
+    {
+      "key": "Ui.Overlays.HoverToShowLastWeek",
+      "text": "上週分數"
+    },
+    {
+      "key": "Ui.Overlays.HoverToShowMults",
+      "text": "顯示倍率"
+    },
+    {
+      "key": "Ui.Overlays.HoverToShowTotal",
+      "text": "最高可能分數"
+    },
+    {
+      "key": "Ui.Pack.Blueprint.WildDesc",
+      "text": "從任何已解鎖的公會中，選擇[PackPicksAllowed]個（最多[PackOptionCount]個）[Blueprint]"
+    },
+    {
+      "key": "Ui.Pack.BlueprintsDesc",
+      "text": "選擇[PackPicksAllowed]個（最多[PackOptionCount]個）[TargetCategory1][Blueprint]"
+    },
+    {
+      "key": "Ui.Pack.BlueprintsRarityDesc",
+      "text": "從任何已解鎖的公會中，選擇[PackPicksAllowed]個（最多[PackOptionCount]個）[RarityScore][Blueprint]"
+    },
+    {
+      "key": "Ui.Pack.GenericDesc",
+      "text": "選擇[PackPicksAllowed]個（最多[PackOptionCount]個）[PackContentsType]"
+    },
+    {
+      "key": "Ui.Pack.ImmediateDesc",
+      "text": "選擇[PackPicksAllowed]個（最多[PackOptionCount]個）[PackContentsType]以立即使用"
+    },
+    {
+      "key": "Ui.PicksRemaining",
+      "text": "剩餘{0}次選擇"
+    },
+    {
+      "key": "Ui.PurchaseDismiss.Title",
+      "text": "購買棄置"
+    },
+    {
+      "key": "Ui.PurchaseRemove.Title",
+      "text": "購買移除"
+    },
+    {
+      "key": "Ui.PurchaseReroll.Title",
+      "text": "購買重擲"
+    },
+    {
+      "key": "Ui.QuestRewardIfSuccessfulPrepend",
+      "text": "成功時： "
+    },
+    {
+      "key": "Ui.RequestCompleted.ClaimReward",
+      "text": "領取獎勵"
+    },
+    {
+      "key": "Ui.RequestCompleted.Title",
+      "text": "請求完成"
+    },
+    {
+      "key": "Ui.ScorePanel.NextMilestone",
+      "text": "下一個里程碑："
+    },
+    {
+      "key": "Ui.ScorePanel.WeeksRemaining",
+      "text": "剩餘{0}週"
+    },
+    {
+      "key": "Ui.SelectGuilds",
+      "text": "選擇公會"
+    },
+    {
+      "key": "Ui.Shop.ConsumableSlotsFull",
+      "text": "消耗品欄位已滿"
+    },
+    {
+      "key": "Ui.Shop.HeirloomSlotsFull",
+      "text": "傳家寶欄位已滿"
+    },
+    {
+      "key": "Ui.ShopExterior.RepairButton",
+      "text": "修理{0}[Gold]"
+    },
+    {
+      "key": "Ui.ShowLoadout",
+      "text": "顯示公會內容"
+    },
+    {
+      "key": "Ui.StartingSelectScreen.NoVictories",
+      "text": "沒有勝利"
+    },
+    {
+      "key": "Ui.StartingSelectScreen.VictoriesCount",
+      "text": "{0}場勝利"
+    },
+    {
+      "key": "Ui.Tooltip.Bribe",
+      "text": "支付金幣以立即完成目前里程碑。每次使用費用都會加倍"
+    },
+    {
+      "key": "Ui.Tooltip.Enchantment",
+      "text": "你在本週結束時的總分會乘以你的附魔分數。附魔分數每週降低0.1，直到降至1"
+    },
+    {
+      "key": "Ui.Tooltip.ExtraWeeks",
+      "text": "額外週數會在你未能達成里程碑時使用。額外週數用盡後，你就會落敗"
+    },
+    {
+      "key": "Ui.Tooltip.Money",
+      "text": "金幣可在里程碑之間的商店中購買傳家寶和消耗品"
+    },
+    {
+      "key": "Ui.Tooltip.Score",
+      "text": "達成目標分數以推進至下一個里程碑"
+    },
+    {
+      "key": "Ui.TriggersRemainingThisWeek",
+      "text": "本週還能<b>觸發</b>{0}次"
+    },
+    {
+      "key": "Ui.UnlockScreen.NewUnlocks",
+      "text": "新解鎖內容"
+    },
+    {
+      "key": "Ui.UnlockScreen.Victories",
+      "text": "勝利"
+    },
+    {
+      "key": "Ui.VictoryScreen.Congrats",
+      "text": "議會恭喜你"
+    },
+    {
+      "key": "Ui.VictoryScreen.GoldRemaining",
+      "text": "剩餘金幣＋傳家寶"
+    },
+    {
+      "key": "Ui.VictoryScreen.HoverOverMilestones",
+      "text": "將游標移至里程碑上查看詳情"
+    },
+    {
+      "key": "University.Description",
+      "text": "{每[Cooldown]週觸發：} @[CategoryScoreTraining]，每個[Training]或[Healing][InRange]"
+    },
+    {
+      "key": "University.Name",
+      "text": "學院"
+    },
+    {
+      "key": "Unlock.Condition.Civic",
+      "text": "再使用{0}個消耗品即可解鎖"
+    },
+    {
+      "key": "Unlock.Condition.Commercial",
+      "text": "再賺取{0}金幣即可解鎖"
+    },
+    {
+      "key": "Unlock.Condition.Industrial",
+      "text": "再建造{0}座建築即可解鎖"
+    },
+    {
+      "key": "Unlock.Condition.Maritime",
+      "text": "再裝備{0}件傳家寶即可解鎖"
+    },
+    {
+      "key": "Unlock.Condition.Martial",
+      "text": "再開始{0}局即可解鎖"
+    },
+    {
+      "key": "Unlock.Condition.WillUnlockAtEndOfRun",
+      "text": "將在目前一局結束時解鎖"
+    },
+    {
+      "key": "Vault.Description",
+      "text": "{每[Cooldown]週觸發：} @[BaseScore]（10×[Gold]數量）[BREAK]不能與任何其他物件相鄰放置"
+    },
+    {
+      "key": "Vault.Name",
+      "text": "金庫"
+    },
+    {
+      "key": "Vineyard.Description",
+      "text": "{生長}（轉化）經過[Cooldown]週後，接著{觸發：}[MoneyCount]"
+    },
+    {
+      "key": "Vineyard.Name",
+      "text": "葡萄園"
+    },
+    {
+      "key": "VoodooDoll.Description",
+      "text": "每當建築觸發時，若它位於[Hazard]的[InRange]內，就給予其[MultParam]"
+    },
+    {
+      "key": "VoodooDoll.Name",
+      "text": "巫毒娃娃"
+    },
+    {
+      "key": "Wall.Description",
+      "text": "{被動：}由[Wall]圍成的封閉區域內，任何地格都會獲得[MultParam] @不會以對角線連接"
+    },
+    {
+      "key": "Wall.Name",
+      "text": "牆"
+    },
+    {
+      "key": "Warehouse.Description",
+      "text": "{被動：}每當另一座建築在[InRange]內獲得分數，就將該分數加到[Warehouse]（不包括其他[Warehouse]） @{觸發時：}獲得等同於儲存分數的分數"
+    },
+    {
+      "key": "Warehouse.Name",
+      "text": "倉庫"
+    },
+    {
+      "key": "WatchTower.Description",
+      "text": "{建立時觸發：} @每個位於[InRange]的[Nature]提供[CategoryScoreNature][BREAK]{移除時：}在每個[Adjacent]地格上建立[Trees]"
+    },
+    {
+      "key": "WatchTower.Name",
+      "text": "瞭望塔"
+    },
+    {
+      "key": "WayStation.Description",
+      "text": "{每[Cooldown]週觸發：} @{觸發} [ActivationCount]座隨機[Adjacent]建築[BREAK]{被動：}視為[Rail] @每當[Neutral]在[Adjacent]建立時，將目前冷卻時間減少1"
+    },
+    {
+      "key": "WayStation.Name",
+      "text": "驛站"
+    },
+    {
+      "key": "WeightedScale.Description",
+      "text": "所有百分比機率加倍。@不會疊加"
+    },
+    {
+      "key": "WeightedScale.Name",
+      "text": "加權天平"
+    },
+    {
+      "key": "Well.Description",
+      "text": "{被動：}與[Well][Adjacent]的[Crop]生長更快，只需1週而非通常所需時間"
+    },
+    {
+      "key": "Well.Name",
+      "text": "水井"
+    },
+    {
+      "key": "WheatField.Description",
+      "text": "{生長}（轉化）經過[Cooldown]週後，接著{觸發：}[RerollCount]和[RemoveCount]"
+    },
+    {
+      "key": "WheatField.Name",
+      "text": "麥田"
+    },
+    {
+      "key": "WhitePaint.Description",
+      "text": "接下來[Cooldown]週內，目標建築獲得：{每當觸發時，[BaseScore]} [BREAK]建築同時只能有1種塗料"
+    },
+    {
+      "key": "WhitePaint.Name",
+      "text": "白漆"
+    },
+    {
+      "key": "Windmill.Description",
+      "text": "{每當[Adjacent][Crop]轉化時觸發：} @每個位於[InRange]的[Residence]或[Training]提供[CategoryScoreResidence]"
+    },
+    {
+      "key": "Windmill.Name",
+      "text": "風車"
+    },
+    {
+      "key": "WitchHut.Description",
+      "text": "{每當另一座建築在[InRange]內建立時觸發：} @每個位於[InRange]的[Healing]或[Sacred]提供[CategoryScoreHealing]"
+    },
+    {
+      "key": "WitchHut.Name",
+      "text": "女巫小屋"
+    },
+    {
+      "key": "WizardsTower.Description",
+      "text": "{建立時觸發：} @獲得[ActivationCount]個隨機[Potion][BREAK]不能建立在與任何其他物件[Adjacent]的位置"
+    },
+    {
+      "key": "WizardsTower.Name",
+      "text": "巫師塔"
+    },
+    {
+      "key": "Woodcutter.Description",
+      "text": "{每[Cooldown]週觸發：} @[TagScoreTrees]並{移除}[ActivationCount]個[Trees][InRange]"
+    },
+    {
+      "key": "Woodcutter.Name",
+      "text": "伐木工"
+    },
+    {
+      "key": "WorkersRosary.Description",
+      "text": "[Engineering]和[Manufacturer]會被視為[Sacred]"
+    },
+    {
+      "key": "WorkersRosary.Name",
+      "text": "工人念珠"
+    },
+    {
+      "key": "Workshop.Description",
+      "text": "{當[Resource]在[InRange]內被移除時觸發：}[MoneyCount]"
+    },
+    {
+      "key": "Workshop.Name",
+      "text": "工坊"
+    }
+  ]
+}

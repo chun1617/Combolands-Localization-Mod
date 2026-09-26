@@ -1,0 +1,113 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: Publish trusted CI artifact
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact tag
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Verify repository structure
+        shell: pwsh
+        run: ./scripts/verify-structure.ps1
+
+      - name: Validate tag and resolve version
+        id: metadata
+        shell: pwsh
+        run: |
+          [xml]$project = Get-Content -LiteralPath 'src/Localization/Localization.csproj' -Raw
+          $version = [string]$project.Project.PropertyGroup.Version
+          $expectedTag = "v$version"
+          if ($env:GITHUB_REF_NAME -ne $expectedTag) {
+            throw "Release tag '$env:GITHUB_REF_NAME' does not match project version '$version' (expected '$expectedTag')."
+          }
+          "version=$version" >> $env:GITHUB_OUTPUT
+
+      - name: Locate successful trusted CI run
+        id: ci
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          run_id="$(
+            gh run list               --workflow ci.yml               --branch main               --commit "$GITHUB_SHA"               --event push               --status success               --limit 1               --json databaseId               --jq '.[0].databaseId'
+          )"
+          if [[ -z "$run_id" || "$run_id" == "null" ]]; then
+            echo "No successful main-branch CI run found for commit $GITHUB_SHA." >&2
+            exit 1
+          fi
+          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
+
+      - name: Download trusted CI artifact
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          gh run download '${{ steps.ci.outputs.run_id }}'             --name 'Localization-v${{ steps.metadata.outputs.version }}'             --dir dist
+
+      - name: Verify downloaded release artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f dist/Localization.dll
+          test -f 'dist/Localization-v${{ steps.metadata.outputs.version }}.zip'
+          test -f dist/SHA256SUMS.txt
+          (
+            cd dist
+            sha256sum -c SHA256SUMS.txt
+          )
+          python3 - <<'PY'
+          import zipfile
+          from pathlib import Path
+
+          version = '${{ steps.metadata.outputs.version }}'
+          archive = Path('dist') / f'Localization-v{version}.zip'
+          expected = sorted([
+              'BepInEx/plugins/Localization/Localization.dll',
+              'BepInEx/plugins/Localization/zh-Hant.json',
+          ])
+          with zipfile.ZipFile(archive) as zf:
+              actual = sorted(name for name in zf.namelist() if not name.endswith('/'))
+          if actual != expected:
+              raise SystemExit(f'Unexpected ZIP contents: {actual!r}')
+          print('Release ZIP contents verified.')
+          PY
+
+      - name: Create or update GitHub Release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="$GITHUB_REF_NAME"
+          assets=(
+            'dist/Localization.dll'
+            'dist/Localization-v${{ steps.metadata.outputs.version }}.zip'
+            'dist/SHA256SUMS.txt'
+          )
+
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release upload "$tag" "${assets[@]}" --clobber
+          else
+            gh release create "$tag" "${assets[@]}"               --verify-tag               --generate-notes               --title "Localization $tag"
+          fi

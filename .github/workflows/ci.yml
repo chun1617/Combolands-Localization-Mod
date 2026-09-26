@@ -1,0 +1,97 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate public tree
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Verify repository structure
+        shell: pwsh
+        run: ./scripts/verify-structure.ps1
+
+      - name: Restore public NuGet dependencies
+        run: dotnet restore src/Localization/Localization.csproj --nologo
+
+  build:
+    name: Build and package
+    if: github.event_name != 'pull_request'
+    needs: validate
+    runs-on:
+      group: combolands-localization-builders
+      labels: [self-hosted, Windows, X64, combolands-localization]
+    timeout-minutes: 15
+    env:
+      COMBOLANDS_MANAGED_DIR: ${{ vars.COMBOLANDS_MANAGED_DIR }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Verify runner compile references
+        shell: pwsh
+        run: |
+          if ([string]::IsNullOrWhiteSpace($env:COMBOLANDS_MANAGED_DIR)) {
+            throw 'Repository variable COMBOLANDS_MANAGED_DIR is not configured.'
+          }
+          $assembly = Join-Path $env:COMBOLANDS_MANAGED_DIR 'Assembly-CSharp.dll'
+          if (-not (Test-Path -LiteralPath $assembly -PathType Leaf)) {
+            throw "Assembly-CSharp.dll was not found under COMBOLANDS_MANAGED_DIR: $env:COMBOLANDS_MANAGED_DIR"
+          }
+
+      - name: Verify repository structure
+        shell: pwsh
+        run: ./scripts/verify-structure.ps1
+
+      - name: Read version
+        id: metadata
+        shell: pwsh
+        run: |
+          [xml]$project = Get-Content -LiteralPath 'src/Localization/Localization.csproj' -Raw
+          $version = [string]$project.Project.PropertyGroup.Version
+          "version=$version" >> $env:GITHUB_OUTPUT
+
+      - name: Build Localization.dll
+        run: dotnet build src/Localization/Localization.csproj -c Release --nologo -p:ContinuousIntegrationBuild=true
+
+      - name: Package release artifacts
+        shell: pwsh
+        run: ./scripts/package.ps1 -Version '${{ steps.metadata.outputs.version }}'
+
+      - name: Upload trusted build artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: Localization-v${{ steps.metadata.outputs.version }}
+          path: dist/*
+          if-no-files-found: error
+          retention-days: 90
