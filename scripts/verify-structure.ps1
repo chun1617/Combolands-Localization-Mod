@@ -5,6 +5,7 @@ $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 
 $requiredFiles = @(
     '.gitignore',
+    'NuGet.Config',
     'README.md',
     '.github/workflows/ci.yml',
     '.github/workflows/release.yml',
@@ -126,12 +127,29 @@ foreach ($entry in $entries) {
     }
 }
 
+$nugetConfigPath = Join-Path $repoRoot 'NuGet.Config'
+[xml]$nugetConfig = Get-Content -LiteralPath $nugetConfigPath -Raw
+$packageSources = @($nugetConfig.configuration.packageSources.add)
+$packageSourceMap = @{}
+foreach ($source in $packageSources) {
+    $packageSourceMap[[string]$source.key] = [string]$source.value
+}
+if ($packageSourceMap['nuget.org'] -ne 'https://api.nuget.org/v3/index.json') {
+    throw 'NuGet.Config must include the official nuget.org v3 feed.'
+}
+if ($packageSourceMap['BepInEx'] -ne 'https://nuget.bepinex.dev/v3/index.json') {
+    throw 'NuGet.Config must include the official BepInEx NuGet feed.'
+}
+
 $ciText = Get-Content -LiteralPath (Join-Path $repoRoot '.github/workflows/ci.yml') -Raw
 if ($ciText -notmatch '(?m)^\s*pull_request\s*:') {
     throw 'ci.yml must validate public pull requests on a GitHub-hosted runner.'
 }
 if ($ciText -notmatch "github\.event_name\s*!=\s*'pull_request'") {
     throw 'ci.yml must explicitly prevent pull requests from reaching the self-hosted build job.'
+}
+if ($ciText -notmatch 'dotnet\s+restore\s+src/Localization/Localization\.csproj\s+--nologo\s+--configfile\s+NuGet\.Config') {
+    throw 'ci.yml must restore packages with the repository NuGet.Config.'
 }
 if ($ciText -notmatch '(?m)^\s*group\s*:\s*combolands-localization-builders\s*$') {
     throw 'ci.yml must route trusted builds through the protected combolands-localization-builders runner group.'

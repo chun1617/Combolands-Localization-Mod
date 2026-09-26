@@ -35,7 +35,7 @@ jobs:
         run: ./scripts/verify-structure.ps1
 
       - name: Restore public NuGet dependencies
-        run: dotnet restore src/Localization/Localization.csproj --nologo
+        run: dotnet restore src/Localization/Localization.csproj --nologo --configfile NuGet.Config
 
   build:
     name: Build and package
@@ -81,8 +81,11 @@ jobs:
           $version = [string]$project.Project.PropertyGroup.Version
           "version=$version" >> $env:GITHUB_OUTPUT
 
+      - name: Restore build dependencies
+        run: dotnet restore src/Localization/Localization.csproj --nologo --configfile NuGet.Config
+
       - name: Build Localization.dll
-        run: dotnet build src/Localization/Localization.csproj -c Release --nologo -p:ContinuousIntegrationBuild=true
+        run: dotnet build src/Localization/Localization.csproj -c Release --no-restore --nologo -p:ContinuousIntegrationBuild=true
 
       - name: Package release artifacts
         shell: pwsh
