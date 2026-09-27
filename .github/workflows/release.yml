@@ -87,7 +87,7 @@ jobs:
           mkdir -p dist
           gh run download '${{ github.event.workflow_run.id }}'             --name 'Localization-v${{ steps.metadata.outputs.version }}'             --dir dist
 
-      - name: Verify downloaded release artifacts
+      - name: Verify downloaded CI artifacts
         if: steps.release_tag.outputs.publish == 'true'
         shell: bash
         run: |
@@ -146,9 +146,7 @@ jobs:
         run: |
           set -euo pipefail
           assets=(
-            'dist/Localization.dll'
             'dist/Localization-v${{ steps.metadata.outputs.version }}.zip'
-            'dist/SHA256SUMS.txt'
           )
 
           if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then

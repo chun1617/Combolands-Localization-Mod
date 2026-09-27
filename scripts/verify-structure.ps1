@@ -225,6 +225,9 @@ if ($releaseText -notmatch 'refs/tags/\$RELEASE_TAG' -or
     $releaseText -notmatch 'git/ref/tags/\$RELEASE_TAG') {
     throw 'release.yml must create and verify the semantic version release tag without moving an existing tag.'
 }
+if ($releaseText -notmatch "(?s)assets=\(\s*'dist/Localization-v\$\{\{\s*steps\.metadata\.outputs\.version\s*\}\}\.zip'\s*\)") {
+    throw 'GitHub Release must expose exactly one player-facing asset: Localization-vX.Y.Z.zip.'
+}
 
 Write-Host 'Public staging structure verification passed.'
 Write-Host "  Version: $version"
