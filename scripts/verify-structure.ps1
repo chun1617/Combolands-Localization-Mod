@@ -7,6 +7,20 @@ $requiredFiles = @(
     '.gitignore',
     'NuGet.Config',
     'README.md',
+    'reference-stubs/Assembly-CSharp/Assembly-CSharp.csproj',
+    'reference-stubs/Assembly-CSharp/GameStubs.cs',
+    'reference-stubs/Unity.TextMeshPro/Unity.TextMeshPro.csproj',
+    'reference-stubs/Unity.TextMeshPro/TMProStubs.cs',
+    'reference-stubs/UnityEngine/UnityEngine.csproj',
+    'reference-stubs/UnityEngine/Forwarders.cs',
+    'reference-stubs/UnityEngine.CoreModule/UnityEngine.CoreModule.csproj',
+    'reference-stubs/UnityEngine.CoreModule/CoreStubs.cs',
+    'reference-stubs/UnityEngine.TextCoreFontEngineModule/UnityEngine.TextCoreFontEngineModule.csproj',
+    'reference-stubs/UnityEngine.TextCoreFontEngineModule/FontEngineStubs.cs',
+    'reference-stubs/UnityEngine.UI/UnityEngine.UI.csproj',
+    'reference-stubs/UnityEngine.UI/UIStubs.cs',
+    'reference-stubs/UnityEngine.UIModule/UnityEngine.UIModule.csproj',
+    'reference-stubs/UnityEngine.UIModule/UIRuntimeStubs.cs',
     '.github/workflows/ci.yml',
     '.github/workflows/release.yml',
     'scripts/package.ps1',
@@ -92,6 +106,23 @@ foreach ($reference in $referenceNodes) {
     }
 }
 
+$stubProjectReferences = @(
+    $projectXml.SelectNodes('/Project/ItemGroup/ProjectReference') |
+        ForEach-Object { [string]$_.Include }
+) | Sort-Object
+$requiredStubProjects = @(
+    '../../reference-stubs/Assembly-CSharp/Assembly-CSharp.csproj',
+    '../../reference-stubs/Unity.TextMeshPro/Unity.TextMeshPro.csproj',
+    '../../reference-stubs/UnityEngine/UnityEngine.csproj',
+    '../../reference-stubs/UnityEngine.CoreModule/UnityEngine.CoreModule.csproj',
+    '../../reference-stubs/UnityEngine.TextCoreFontEngineModule/UnityEngine.TextCoreFontEngineModule.csproj',
+    '../../reference-stubs/UnityEngine.UI/UnityEngine.UI.csproj',
+    '../../reference-stubs/UnityEngine.UIModule/UnityEngine.UIModule.csproj'
+) | Sort-Object
+if (($stubProjectReferences -join "`n") -ne ($requiredStubProjects -join "`n")) {
+    throw 'Localization.csproj source-only reference stub project set is missing or changed.'
+}
+
 $pluginPath = Join-Path $repoRoot 'src/Localization/Plugin.cs'
 $pluginText = Get-Content -LiteralPath $pluginPath -Raw
 $pluginVersionMatch = [regex]::Match(
@@ -143,19 +174,20 @@ if ($packageSourceMap['BepInEx'] -ne 'https://nuget.bepinex.dev/v3/index.json') 
 
 $ciText = Get-Content -LiteralPath (Join-Path $repoRoot '.github/workflows/ci.yml') -Raw
 if ($ciText -notmatch '(?m)^\s*pull_request\s*:') {
-    throw 'ci.yml must validate public pull requests on a GitHub-hosted runner.'
-}
-if ($ciText -notmatch "github\.event_name\s*!=\s*'pull_request'") {
-    throw 'ci.yml must explicitly prevent pull requests from reaching the self-hosted build job.'
+    throw 'ci.yml must validate public pull requests.'
 }
 if ($ciText -notmatch 'dotnet\s+restore\s+src/Localization/Localization\.csproj\s+--nologo\s+--configfile\s+NuGet\.Config') {
     throw 'ci.yml must restore packages with the repository NuGet.Config.'
 }
-if ($ciText -notmatch '(?m)^\s*group\s*:\s*combolands-localization-builders\s*$') {
-    throw 'ci.yml must route trusted builds through the protected combolands-localization-builders runner group.'
+if ($ciText -match 'self-hosted|COMBOLANDS_MANAGED_DIR|combolands-localization-builders') {
+    throw 'ci.yml must be fully GitHub-hosted and independent of private game paths/runners.'
 }
-if ($ciText -notmatch 'labels\s*:\s*\[self-hosted,\s*Windows,\s*X64,\s*combolands-localization\]') {
-    throw 'ci.yml protected build runner labels are missing or changed.'
+$hostedRunnerMatches = [regex]::Matches($ciText, '(?m)^\s*runs-on\s*:\s*ubuntu-latest\s*$')
+if ($hostedRunnerMatches.Count -lt 2) {
+    throw 'ci.yml validate and build jobs must both run on ubuntu-latest.'
+}
+if ($ciText -match 'UseGameAssemblies\s*=\s*true|UseGameAssemblies=true') {
+    throw 'ci.yml must build against source-only reference stubs, not game assemblies.'
 }
 
 $releaseText = Get-Content -LiteralPath (Join-Path $repoRoot '.github/workflows/release.yml') -Raw

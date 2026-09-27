@@ -9,13 +9,25 @@
     <Deterministic>true</Deterministic>
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     <CombolandsManagedDir Condition="'$(CombolandsManagedDir)' == ''">$(COMBOLANDS_MANAGED_DIR)</CombolandsManagedDir>
+    <UseGameAssemblies Condition="'$(UseGameAssemblies)' == '' and '$(CombolandsManagedDir)' != ''">true</UseGameAssemblies>
+    <UseGameAssemblies Condition="'$(UseGameAssemblies)' == ''">false</UseGameAssemblies>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="BepInEx.Core" Version="5.4.21" />
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(UseGameAssemblies)' != 'true'">
+    <ProjectReference Include="../../reference-stubs/Assembly-CSharp/Assembly-CSharp.csproj" Private="false" />
+    <ProjectReference Include="../../reference-stubs/Unity.TextMeshPro/Unity.TextMeshPro.csproj" Private="false" />
+    <ProjectReference Include="../../reference-stubs/UnityEngine/UnityEngine.csproj" Private="false" />
+    <ProjectReference Include="../../reference-stubs/UnityEngine.CoreModule/UnityEngine.CoreModule.csproj" Private="false" />
+    <ProjectReference Include="../../reference-stubs/UnityEngine.TextCoreFontEngineModule/UnityEngine.TextCoreFontEngineModule.csproj" Private="false" />
+    <ProjectReference Include="../../reference-stubs/UnityEngine.UI/UnityEngine.UI.csproj" Private="false" />
+    <ProjectReference Include="../../reference-stubs/UnityEngine.UIModule/UnityEngine.UIModule.csproj" Private="false" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(UseGameAssemblies)' == 'true'">
     <Reference Include="Assembly-CSharp" HintPath="$(CombolandsManagedDir)/Assembly-CSharp.dll" Private="false" />
     <Reference Include="Unity.TextMeshPro" HintPath="$(CombolandsManagedDir)/Unity.TextMeshPro.dll" Private="false" />
     <Reference Include="UnityEngine" HintPath="$(CombolandsManagedDir)/UnityEngine.dll" Private="false" />
@@ -33,7 +45,7 @@
     <None Include="../../localization/zh-Hant.json" Link="zh-Hant.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup Condition="'$(UseGameAssemblies)' == 'true'">
     <RequiredGameReference Include="$(CombolandsManagedDir)/Assembly-CSharp.dll" />
     <RequiredGameReference Include="$(CombolandsManagedDir)/Unity.TextMeshPro.dll" />
     <RequiredGameReference Include="$(CombolandsManagedDir)/UnityEngine.dll" />
@@ -47,9 +59,11 @@
     <RequiredGameReference Include="$(CombolandsManagedDir)/Sirenix.Utilities.dll" />
   </ItemGroup>
 
-  <Target Name="ValidateCombolandsManagedDir" BeforeTargets="ResolveAssemblyReferences" Condition="'$(DesignTimeBuild)' != 'true'">
+  <Target Name="ValidateCombolandsManagedDir"
+          BeforeTargets="ResolveAssemblyReferences"
+          Condition="'$(DesignTimeBuild)' != 'true' and '$(UseGameAssemblies)' == 'true'">
     <Error Condition="'$(CombolandsManagedDir)' == ''"
-           Text="CombolandsManagedDir is required. Set -p:CombolandsManagedDir=... or COMBOLANDS_MANAGED_DIR to the game's Combolands_Data/Managed directory." />
+           Text="CombolandsManagedDir is required when UseGameAssemblies=true." />
     <Error Condition="!Exists('%(RequiredGameReference.Identity)')"
            Text="Missing compile reference: %(RequiredGameReference.Identity)" />
   </Target>
