@@ -1,71 +1,94 @@
 name: Release
 
 on:
-  push:
-    tags:
-      - 'v*.*.*'
+  workflow_run:
+    workflows:
+      - CI
+    types:
+      - completed
 
 permissions:
   contents: write
   actions: read
 
 concurrency:
-  group: release-${{ github.ref }}
+  group: release-${{ github.event.workflow_run.head_sha }}
   cancel-in-progress: false
 
 jobs:
   release:
-    name: Publish trusted CI artifact
+    name: Tag and publish successful CI build
+    if: >
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push' &&
+      github.event.workflow_run.head_branch == 'main'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - name: Checkout exact tag
+      - name: Checkout successful CI commit
         uses: actions/checkout@v7
         with:
+          ref: ${{ github.event.workflow_run.head_sha }}
           persist-credentials: false
 
       - name: Verify repository structure
         shell: pwsh
         run: ./scripts/verify-structure.ps1
 
-      - name: Validate tag and resolve version
+      - name: Resolve release metadata
         id: metadata
         shell: pwsh
         run: |
           [xml]$project = Get-Content -LiteralPath 'src/Localization/Localization.csproj' -Raw
           $version = [string]$project.Project.PropertyGroup.Version
-          $expectedTag = "v$version"
-          if ($env:GITHUB_REF_NAME -ne $expectedTag) {
-            throw "Release tag '$env:GITHUB_REF_NAME' does not match project version '$version' (expected '$expectedTag')."
+          if ($version -notmatch '^\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?$') {
+            throw "Project version '$version' is not valid for an automatic release tag."
           }
-          "version=$version" >> $env:GITHUB_OUTPUT
 
-      - name: Locate successful trusted CI run
-        id: ci
+          $tag = "v$version"
+          "version=$version" >> $env:GITHUB_OUTPUT
+          "tag=$tag" >> $env:GITHUB_OUTPUT
+
+      - name: Check release tag state
+        id: release_tag
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.metadata.outputs.tag }}
+          RELEASE_SHA: ${{ github.event.workflow_run.head_sha }}
         run: |
           set -euo pipefail
-          run_id="$(
-            gh run list               --workflow ci.yml               --branch main               --commit "$GITHUB_SHA"               --event push               --status success               --limit 1               --json databaseId               --jq '.[0].databaseId'
-          )"
-          if [[ -z "$run_id" || "$run_id" == "null" ]]; then
-            echo "No successful main-branch CI run found for commit $GITHUB_SHA." >&2
-            exit 1
-          fi
-          echo "run_id=$run_id" >> "$GITHUB_OUTPUT"
 
-      - name: Download trusted CI artifact
+          if existing_sha="$(
+            gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$RELEASE_TAG"               --jq '.object.sha' 2>/dev/null
+          )"; then
+            if [[ "$existing_sha" == "$RELEASE_SHA" ]]; then
+              echo "publish=true" >> "$GITHUB_OUTPUT"
+              echo "create=false" >> "$GITHUB_OUTPUT"
+              echo "Release tag $RELEASE_TAG already points at this CI commit."
+            else
+              echo "publish=false" >> "$GITHUB_OUTPUT"
+              echo "create=false" >> "$GITHUB_OUTPUT"
+              echo "::notice::Release tag $RELEASE_TAG already points at $existing_sha. Version $RELEASE_TAG is already published; bump the project version for a new release."
+            fi
+          else
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+            echo "create=true" >> "$GITHUB_OUTPUT"
+            echo "Release tag $RELEASE_TAG will be created at $RELEASE_SHA."
+          fi
+
+      - name: Download successful CI artifact
+        if: steps.release_tag.outputs.publish == 'true'
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           mkdir -p dist
-          gh run download '${{ steps.ci.outputs.run_id }}'             --name 'Localization-v${{ steps.metadata.outputs.version }}'             --dir dist
+          gh run download '${{ github.event.workflow_run.id }}'             --name 'Localization-v${{ steps.metadata.outputs.version }}'             --dir dist
 
       - name: Verify downloaded release artifacts
+        if: steps.release_tag.outputs.publish == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -93,21 +116,43 @@ jobs:
           print('Release ZIP contents verified.')
           PY
 
-      - name: Create or update GitHub Release
+      - name: Create release tag
+        if: >
+          steps.release_tag.outputs.publish == 'true' &&
+          steps.release_tag.outputs.create == 'true'
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.metadata.outputs.tag }}
+          RELEASE_SHA: ${{ github.event.workflow_run.head_sha }}
         run: |
           set -euo pipefail
-          tag="$GITHUB_REF_NAME"
+          gh api --method POST "repos/$GITHUB_REPOSITORY/git/refs"             -f ref="refs/tags/$RELEASE_TAG"             -f sha="$RELEASE_SHA" >/dev/null
+
+          created_sha="$(
+            gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$RELEASE_TAG"               --jq '.object.sha'
+          )"
+          if [[ "$created_sha" != "$RELEASE_SHA" ]]; then
+            echo "Created tag $RELEASE_TAG points at $created_sha, expected $RELEASE_SHA." >&2
+            exit 1
+          fi
+
+      - name: Create or update GitHub Release
+        if: steps.release_tag.outputs.publish == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.metadata.outputs.tag }}
+        run: |
+          set -euo pipefail
           assets=(
             'dist/Localization.dll'
             'dist/Localization-v${{ steps.metadata.outputs.version }}.zip'
             'dist/SHA256SUMS.txt'
           )
 
-          if gh release view "$tag" >/dev/null 2>&1; then
-            gh release upload "$tag" "${assets[@]}" --clobber
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            gh release upload "$RELEASE_TAG" "${assets[@]}" --clobber
           else
-            gh release create "$tag" "${assets[@]}"               --verify-tag               --generate-notes               --title "Localization $tag"
+            gh release create "$RELEASE_TAG" "${assets[@]}"               --verify-tag               --generate-notes               --title "Localization $RELEASE_TAG"
           fi

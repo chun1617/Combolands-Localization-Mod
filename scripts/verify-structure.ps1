@@ -191,23 +191,39 @@ if ($ciText -match 'UseGameAssemblies\s*=\s*true|UseGameAssemblies=true') {
 }
 
 $releaseText = Get-Content -LiteralPath (Join-Path $repoRoot '.github/workflows/release.yml') -Raw
-if ($releaseText -notmatch 'v\*\.\*\.\*') {
-    throw 'release.yml must be tag-driven by v*.*.* tags.'
+if ($releaseText -notmatch '(?m)^\s*workflow_run\s*:') {
+    throw 'release.yml must be triggered from completion of CI.'
+}
+if ($releaseText -notmatch '(?m)^\s*-\s*CI\s*$' -or
+    $releaseText -notmatch '(?m)^\s*-\s*completed\s*$') {
+    throw 'release.yml workflow_run trigger must target completed CI runs.'
+}
+if ($releaseText -notmatch "github\.event\.workflow_run\.conclusion\s*==\s*'success'" -or
+    $releaseText -notmatch "github\.event\.workflow_run\.event\s*==\s*'push'" -or
+    $releaseText -notmatch "github\.event\.workflow_run\.head_branch\s*==\s*'main'") {
+    throw 'release.yml must publish only successful push CI runs from main.'
 }
 if ($releaseText -notmatch '(?m)^\s*contents\s*:\s*write\s*$') {
-    throw 'release.yml must grant contents: write for GitHub Release publishing.'
+    throw 'release.yml must grant contents: write for release tag and GitHub Release publishing.'
 }
 if ($releaseText -notmatch '(?m)^\s*actions\s*:\s*read\s*$') {
-    throw 'release.yml must grant actions: read to download the trusted CI artifact.'
+    throw 'release.yml must grant actions: read to download the completed CI artifact.'
 }
 if ($releaseText -notmatch '(?m)^\s*runs-on\s*:\s*ubuntu-latest\s*$') {
     throw 'release.yml must publish from a GitHub-hosted runner.'
 }
 if ($releaseText -match 'self-hosted|COMBOLANDS_MANAGED_DIR') {
-    throw 'release.yml must not access the game-reference self-hosted runner.'
+    throw 'release.yml must not access private game references or self-hosted runners.'
 }
-if ($releaseText -notmatch 'gh\s+run\s+list' -or $releaseText -notmatch '--commit\s+"?\$GITHUB_SHA"?') {
-    throw 'release.yml must promote artifacts from a successful CI run for the exact tagged commit.'
+if ($releaseText -notmatch "ref:\s*\$\{\{\s*github\.event\.workflow_run\.head_sha\s*\}\}") {
+    throw 'release.yml must checkout the exact successful CI commit.'
+}
+if ($releaseText -notmatch "gh\s+run\s+download\s+'?\$\{\{\s*github\.event\.workflow_run\.id\s*\}\}'?") {
+    throw 'release.yml must download artifacts from the exact triggering CI run.'
+}
+if ($releaseText -notmatch 'refs/tags/\$RELEASE_TAG' -or
+    $releaseText -notmatch 'git/ref/tags/\$RELEASE_TAG') {
+    throw 'release.yml must create and verify the semantic version release tag without moving an existing tag.'
 }
 
 Write-Host 'Public staging structure verification passed.'
