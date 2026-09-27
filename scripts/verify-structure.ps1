@@ -95,6 +95,20 @@ if ($assemblyName -ne 'Localization') {
 if ($version -notmatch '^\d+\.\d+\.\d+(?:[-+][0-9A-Za-z.-]+)?$') {
     throw "Project version is not semantic-version shaped: $version"
 }
+
+$releaseNotesRelativePath = "release-notes/v$version.md"
+$releaseNotesPath = Join-Path $repoRoot $releaseNotesRelativePath
+if (-not (Test-Path -LiteralPath $releaseNotesPath -PathType Leaf)) {
+    throw "Missing release notes for current version: $releaseNotesRelativePath"
+}
+$releaseNotesText = Get-Content -LiteralPath $releaseNotesPath -Raw
+if ([string]::IsNullOrWhiteSpace($releaseNotesText)) {
+    throw "Release notes are empty: $releaseNotesRelativePath"
+}
+if ($releaseNotesText.Length -gt 1200) {
+    throw "Release notes must stay concise (maximum 1200 characters): $releaseNotesRelativePath"
+}
+
 $referenceNodes = @($projectXml.SelectNodes('/Project/ItemGroup/Reference'))
 if ($referenceNodes.Count -eq 0) {
     throw 'Localization.csproj does not declare game/Unity compile references.'
@@ -227,6 +241,13 @@ if ($releaseText -notmatch 'refs/tags/\$RELEASE_TAG' -or
 }
 if ($releaseText -notmatch "(?s)assets=\(\s*'dist/Localization-v\$\{\{\s*steps\.metadata\.outputs\.version\s*\}\}\.zip'\s*\)") {
     throw 'GitHub Release must expose exactly one player-facing asset: Localization-vX.Y.Z.zip.'
+}
+if ($releaseText -match '--generate-notes') {
+    throw 'release.yml must use curated version release notes instead of GitHub generated notes.'
+}
+if ($releaseText -notmatch 'RELEASE_NOTES_FILE:\s*\$\{\{\s*steps\.metadata\.outputs\.notes_file\s*\}\}' -or
+    $releaseText -notmatch '--notes-file\s+"\$RELEASE_NOTES_FILE"') {
+    throw 'release.yml must publish the curated release-notes/vX.Y.Z.md file.'
 }
 
 Write-Host 'Public staging structure verification passed.'

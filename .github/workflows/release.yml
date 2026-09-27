@@ -46,8 +46,17 @@ jobs:
           }
 
           $tag = "v$version"
+          $notesFile = "release-notes/$tag.md"
+          if (-not (Test-Path -LiteralPath $notesFile -PathType Leaf)) {
+            throw "Release notes file '$notesFile' is missing."
+          }
+          if ([string]::IsNullOrWhiteSpace((Get-Content -LiteralPath $notesFile -Raw))) {
+            throw "Release notes file '$notesFile' is empty."
+          }
+
           "version=$version" >> $env:GITHUB_OUTPUT
           "tag=$tag" >> $env:GITHUB_OUTPUT
+          "notes_file=$notesFile" >> $env:GITHUB_OUTPUT
 
       - name: Check release tag state
         id: release_tag
@@ -143,6 +152,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           RELEASE_TAG: ${{ steps.metadata.outputs.tag }}
+          RELEASE_NOTES_FILE: ${{ steps.metadata.outputs.notes_file }}
         run: |
           set -euo pipefail
           assets=(
@@ -150,7 +160,8 @@ jobs:
           )
 
           if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            gh release edit "$RELEASE_TAG" --notes-file "$RELEASE_NOTES_FILE"
             gh release upload "$RELEASE_TAG" "${assets[@]}" --clobber
           else
-            gh release create "$RELEASE_TAG" "${assets[@]}"               --verify-tag               --generate-notes               --title "Localization $RELEASE_TAG"
+            gh release create "$RELEASE_TAG" "${assets[@]}"               --verify-tag               --notes-file "$RELEASE_NOTES_FILE"               --title "Localization $RELEASE_TAG"
           fi
