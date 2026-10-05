@@ -210,6 +210,28 @@ if (-not $logoOverrideText.Contains('if (LocalizationState.IsChinese)')) {
 if ($logoOverrideText.Contains('LocalizationState.IsTraditionalChinese')) {
     throw 'Main-menu logo policy must not be restricted to TraditionalChinese only.'
 }
+foreach ($requiredLogoLayoutToken in @(
+    'ApplyLocalizedLayout()',
+    'RestoreOriginalLayout()',
+    'LocalizedLogoSize',
+    'LocalizedLogoAnchoredPosition'
+)) {
+    if (-not $logoOverrideText.Contains($requiredLogoLayoutToken)) {
+        throw "Main-menu logo runtime layout contract is missing: $requiredLogoLayoutToken"
+    }
+}
+
+$settingsPatchPath = Join-Path $repoRoot 'src/Localization/SettingsMenuPatch.cs'
+$settingsPatchText = Get-Content -LiteralPath $settingsPatchPath -Raw
+foreach ($requiredSettingsLayoutToken in @(
+    'LayoutUtility.GetMinHeight(layoutRect)',
+    'LayoutUtility.GetMinWidth(layoutRect)',
+    'hostLayout.minHeight = viewportHeight'
+)) {
+    if (-not $settingsPatchText.Contains($requiredSettingsLayoutToken)) {
+        throw "Settings scroll layout hardening contract is missing: $requiredSettingsLayoutToken"
+    }
+}
 
 $catalogPath = Join-Path $repoRoot 'localization/zh-Hant.json'
 $catalog = Get-Content -LiteralPath $catalogPath -Raw | ConvertFrom-Json

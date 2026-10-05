@@ -287,9 +287,22 @@ namespace Combolands.Localization
             LayoutRebuilder.ForceRebuildLayoutImmediate(layoutRect);
 
             float preferredHeight = LayoutUtility.GetPreferredHeight(layoutRect);
-            float requiredHeight = Mathf.Max(preferredHeight, layoutRect.rect.height);
+            float minimumHeight = LayoutUtility.GetMinHeight(layoutRect);
+            float requiredHeight = Mathf.Max(
+                Mathf.Max(preferredHeight, minimumHeight),
+                layoutRect.rect.height);
             float minY = float.PositiveInfinity;
             float maxY = float.NegativeInfinity;
+            float fallbackHeight = 0f;
+            int activeChildCount = 0;
+
+            VerticalLayoutGroup layoutGroup =
+                layoutRect.GetComponent<VerticalLayoutGroup>();
+            if (layoutGroup != null)
+            {
+                fallbackHeight =
+                    layoutGroup.padding.top + layoutGroup.padding.bottom;
+            }
 
             for (int i = 0; i < layoutRect.childCount; i++)
             {
@@ -305,6 +318,19 @@ namespace Combolands.Localization
                         childRect);
                 minY = Mathf.Min(minY, childBounds.min.y);
                 maxY = Mathf.Max(maxY, childBounds.max.y);
+
+                float childHeight = Mathf.Max(
+                    LayoutUtility.GetPreferredHeight(childRect),
+                    LayoutUtility.GetMinHeight(childRect));
+                childHeight = Mathf.Max(childHeight, childRect.rect.height);
+                fallbackHeight += Mathf.Max(0f, childHeight);
+                activeChildCount++;
+            }
+
+            if (layoutGroup != null && activeChildCount > 1)
+            {
+                fallbackHeight +=
+                    layoutGroup.spacing * (activeChildCount - 1);
             }
 
             if (!float.IsInfinity(minY) && !float.IsInfinity(maxY))
@@ -314,6 +340,7 @@ namespace Combolands.Localization
                     Mathf.Max(0f, maxY - minY));
             }
 
+            requiredHeight = Mathf.Max(requiredHeight, fallbackHeight);
             return requiredHeight;
         }
 
@@ -322,9 +349,19 @@ namespace Combolands.Localization
             LayoutRebuilder.ForceRebuildLayoutImmediate(layoutRect);
 
             float preferredWidth = LayoutUtility.GetPreferredWidth(layoutRect);
-            float requiredWidth = Mathf.Max(preferredWidth, layoutRect.rect.width);
+            float minimumWidth = LayoutUtility.GetMinWidth(layoutRect);
+            float requiredWidth = Mathf.Max(
+                Mathf.Max(preferredWidth, minimumWidth),
+                layoutRect.rect.width);
             float minX = float.PositiveInfinity;
             float maxX = float.NegativeInfinity;
+            float fallbackWidth = 0f;
+
+            VerticalLayoutGroup layoutGroup =
+                layoutRect.GetComponent<VerticalLayoutGroup>();
+            float horizontalPadding = layoutGroup != null
+                ? layoutGroup.padding.left + layoutGroup.padding.right
+                : 0f;
 
             for (int i = 0; i < layoutRect.childCount; i++)
             {
@@ -340,6 +377,12 @@ namespace Combolands.Localization
                         childRect);
                 minX = Mathf.Min(minX, childBounds.min.x);
                 maxX = Mathf.Max(maxX, childBounds.max.x);
+
+                float childWidth = Mathf.Max(
+                    LayoutUtility.GetPreferredWidth(childRect),
+                    LayoutUtility.GetMinWidth(childRect));
+                childWidth = Mathf.Max(childWidth, childRect.rect.width);
+                fallbackWidth = Mathf.Max(fallbackWidth, childWidth);
             }
 
             if (!float.IsInfinity(minX) && !float.IsInfinity(maxX))
@@ -349,6 +392,9 @@ namespace Combolands.Localization
                     Mathf.Max(0f, maxX - minX));
             }
 
+            requiredWidth = Mathf.Max(
+                requiredWidth,
+                fallbackWidth + horizontalPadding);
             return requiredWidth;
         }
 
@@ -483,7 +529,7 @@ namespace Combolands.Localization
             hostLayout.minWidth = hostPreferredWidth;
             hostLayout.flexibleWidth = 0f;
             hostLayout.preferredHeight = viewportHeight;
-            hostLayout.minHeight = 0f;
+            hostLayout.minHeight = viewportHeight;
             hostLayout.flexibleHeight = 0f;
 
             LayoutRebuilder.ForceRebuildLayoutImmediate(_contentRect);

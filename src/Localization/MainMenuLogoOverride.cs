@@ -14,9 +14,20 @@ namespace Combolands.Localization
         private const string ResourceName =
             "Combolands.Localization.Assets.MainMenuLogo.zh-Hant.png";
 
+        // The authored MainMenuLogo sprite occupies only the upper portion of
+        // its 440x275 Image. The localized artwork fills most of its texture,
+        // so it needs a smaller, upper-centered RectTransform while active.
+        private static readonly Vector2 LocalizedLogoSize = new Vector2(250f, 83f);
+        private static readonly Vector2 LocalizedLogoAnchoredPosition =
+            new Vector2(0f, 88f);
+
         private static ManualLogSource _log;
         private static Image _logoImage;
         private static Sprite _originalSprite;
+        private static RectTransform _logoRect;
+        private static Vector2 _originalSizeDelta;
+        private static Vector2 _originalAnchoredPosition;
+        private static bool _originalLayoutCaptured;
         private static Texture2D _replacementTexture;
         private static Sprite _replacementSprite;
         private static bool _loadAttempted;
@@ -47,23 +58,21 @@ namespace Combolands.Localization
 
                 _lookupFailureLogged = false;
 
-                if (logoImage.sprite != null &&
-                    string.Equals(logoImage.sprite.name, OriginalSpriteName, StringComparison.Ordinal))
-                {
-                    _originalSprite = logoImage.sprite;
-                }
+                CaptureOriginalState(logoImage);
 
                 if (LocalizationState.IsChinese)
                 {
                     Sprite replacement = GetOrCreateReplacementSprite();
                     if (replacement != null)
                     {
+                        ApplyLocalizedLayout();
                         logoImage.sprite = replacement;
                     }
 
                     return;
                 }
 
+                RestoreOriginalLayout();
                 if (_originalSprite != null)
                 {
                     logoImage.sprite = _originalSprite;
@@ -114,6 +123,66 @@ namespace Combolands.Localization
 
             _logoImage = fallback;
             return _logoImage;
+        }
+
+        private static void CaptureOriginalState(Image logoImage)
+        {
+            if (logoImage == null)
+            {
+                return;
+            }
+
+            if (logoImage.sprite != null &&
+                string.Equals(
+                    logoImage.sprite.name,
+                    OriginalSpriteName,
+                    StringComparison.Ordinal))
+            {
+                _originalSprite = logoImage.sprite;
+            }
+
+            RectTransform rect = logoImage.transform as RectTransform;
+            if (rect == null)
+            {
+                return;
+            }
+
+            if (_logoRect != rect)
+            {
+                _logoRect = rect;
+                _originalLayoutCaptured = false;
+            }
+
+            if (_originalLayoutCaptured)
+            {
+                return;
+            }
+
+            _originalSizeDelta = rect.sizeDelta;
+            _originalAnchoredPosition = rect.anchoredPosition;
+            _originalLayoutCaptured = true;
+        }
+
+        private static void ApplyLocalizedLayout()
+        {
+            if (!_originalLayoutCaptured || _logoRect == null)
+            {
+                return;
+            }
+
+            _logoRect.sizeDelta = LocalizedLogoSize;
+            _logoRect.anchoredPosition = LocalizedLogoAnchoredPosition;
+        }
+
+        private static void RestoreOriginalLayout()
+        {
+            if (!_originalLayoutCaptured || _logoRect == null)
+            {
+                return;
+            }
+
+            _logoRect.sizeDelta = _originalSizeDelta;
+            _logoRect.anchoredPosition = _originalAnchoredPosition;
         }
 
         private static Sprite GetOrCreateReplacementSprite()

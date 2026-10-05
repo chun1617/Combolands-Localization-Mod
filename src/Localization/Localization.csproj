@@ -5,7 +5,7 @@
     <Nullable>disable</Nullable>
     <AssemblyName>Localization</AssemblyName>
     <RootNamespace>Combolands.Localization</RootNamespace>
-    <Version>0.4.0</Version>
+    <Version>0.4.1</Version>
     <Deterministic>true</Deterministic>
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     <CombolandsManagedDir Condition="'$(CombolandsManagedDir)' == ''">$(COMBOLANDS_MANAGED_DIR)</CombolandsManagedDir>

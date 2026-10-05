@@ -85,7 +85,10 @@ namespace UnityEngine.UI
         public RectOffset padding { get; set; }
     }
 
-    public class VerticalLayoutGroup : LayoutGroup { }
+    public class VerticalLayoutGroup : LayoutGroup
+    {
+        public float spacing { get; set; }
+    }
 
     public class ContentSizeFitter : Behaviour
     {
@@ -98,6 +101,8 @@ namespace UnityEngine.UI
 
     public static class LayoutUtility
     {
+        public static float GetMinHeight(RectTransform rect) => 0f;
+        public static float GetMinWidth(RectTransform rect) => 0f;
         public static float GetPreferredHeight(RectTransform rect) => 0f;
         public static float GetPreferredWidth(RectTransform rect) => 0f;
     }
