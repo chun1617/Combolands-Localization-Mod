@@ -18,6 +18,11 @@ namespace Library.Localization
 
 namespace Shared.UI
 {
+    public class MainMenuController : MonoBehaviour
+    {
+        private void Awake() { }
+    }
+
     public class SettingsMenu : MonoBehaviour
     {
         public void Show() { }

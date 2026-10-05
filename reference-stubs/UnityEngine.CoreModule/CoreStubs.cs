@@ -78,6 +78,26 @@ namespace UnityEngine
 
     public class CanvasRenderer : Component { }
 
+    public class Texture2D : Object
+    {
+        public Texture2D(int width, int height)
+        {
+            this.width = width;
+            this.height = height;
+        }
+        public int width { get; }
+        public int height { get; }
+    }
+
+    public class Sprite : Object
+    {
+        public static Sprite Create(
+            Texture2D texture,
+            Rect rect,
+            Vector2 pivot,
+            float pixelsPerUnit) => new Sprite();
+    }
+
     public struct Vector2
     {
         public float x;
@@ -114,6 +134,13 @@ namespace UnityEngine
 
     public struct Rect
     {
+        public Rect(float x, float y, float width, float height)
+        {
+            xMin = x;
+            yMin = y;
+            this.width = width;
+            this.height = height;
+        }
         public float xMin { get; }
         public float yMin { get; }
         public float width { get; }

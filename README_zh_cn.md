@@ -12,7 +12,7 @@
 
 模组还提供 **80%～140% 的文字缩放**，方便根据屏幕尺寸和阅读习惯调整界面文字。
 
-> 当前版本：**v0.3.0**  
+> 当前版本：**v0.4.0**
 > 适用平台：**Windows**  
 > 需要预先安装：**BepInEx 5.x**
 
@@ -29,6 +29,7 @@
 ## 功能
 
 - 繁体中文界面翻译
+- 繁体中文／简体中文模式均使用中文化主菜单 LOGO，English 保留原版 LOGO
 - 简体中文即时转换
 - 可随时切回原版英文
 - 无需重启游戏即可切换语言
@@ -78,10 +79,10 @@ BepInEx_win_x64_5.4.23.5.zip
 Localization-vX.Y.Z.zip
 ~~~
 
-例如 v0.3.0 对应：
+例如 v0.4.0 对应：
 
 ~~~text
-Localization-v0.3.0.zip
+Localization-v0.4.0.zip
 ~~~
 
 普通玩家只需要下载 ZIP，不需要下载源代码。
@@ -214,7 +215,7 @@ BepInEx/plugins/Localization/zh-Hant.json
 
 ~~~text
 错误：
-Combolands/Localization-v0.3.0/BepInEx/...
+Combolands/Localization-v0.4.0/BepInEx/...
 
 正确：
 Combolands/BepInEx/...
@@ -288,7 +289,7 @@ Combolands 更新后，如果游戏内部界面或程序结构发生变化，中
 当前模组版本：
 
 ~~~text
-Localization v0.3.0
+Localization v0.4.0
 ~~~
 
 当前源代码基线对应的 Combolands build：

@@ -15,6 +15,8 @@ $requiredFiles = @(
     'reference-stubs/UnityEngine/Forwarders.cs',
     'reference-stubs/UnityEngine.CoreModule/UnityEngine.CoreModule.csproj',
     'reference-stubs/UnityEngine.CoreModule/CoreStubs.cs',
+    'reference-stubs/UnityEngine.ImageConversionModule/UnityEngine.ImageConversionModule.csproj',
+    'reference-stubs/UnityEngine.ImageConversionModule/ImageConversionStubs.cs',
     'reference-stubs/UnityEngine.TextCoreFontEngineModule/UnityEngine.TextCoreFontEngineModule.csproj',
     'reference-stubs/UnityEngine.TextCoreFontEngineModule/FontEngineStubs.cs',
     'reference-stubs/UnityEngine.UI/UnityEngine.UI.csproj',
@@ -30,13 +32,16 @@ $requiredFiles = @(
     'src/Localization/CjkFontFallback.cs',
     'src/Localization/LocalizationRefresh.cs',
     'src/Localization/LocalizationState.cs',
+    'src/Localization/MainMenuLogoOverride.cs',
+    'src/Localization/MainMenuLogoPatch.cs',
     'src/Localization/ModSettings.cs',
     'src/Localization/ModStrings.cs',
     'src/Localization/SettingsMenuPatch.cs',
     'src/Localization/TextScaleManager.cs',
     'src/Localization/TranslationCatalog.cs',
     'src/Localization/TranslationPatch.cs',
-    'localization/zh-Hant.json'
+    'localization/zh-Hant.json',
+    'assets/MainMenuLogo.zh-Hant.png'
 )
 
 $missing = @(
@@ -129,12 +134,58 @@ $requiredStubProjects = @(
     '../../reference-stubs/Unity.TextMeshPro/Unity.TextMeshPro.csproj',
     '../../reference-stubs/UnityEngine/UnityEngine.csproj',
     '../../reference-stubs/UnityEngine.CoreModule/UnityEngine.CoreModule.csproj',
+    '../../reference-stubs/UnityEngine.ImageConversionModule/UnityEngine.ImageConversionModule.csproj',
     '../../reference-stubs/UnityEngine.TextCoreFontEngineModule/UnityEngine.TextCoreFontEngineModule.csproj',
     '../../reference-stubs/UnityEngine.UI/UnityEngine.UI.csproj',
     '../../reference-stubs/UnityEngine.UIModule/UnityEngine.UIModule.csproj'
 ) | Sort-Object
 if (($stubProjectReferences -join "`n") -ne ($requiredStubProjects -join "`n")) {
     throw 'Localization.csproj source-only reference stub project set is missing or changed.'
+}
+
+$logoRelativePath = 'assets/MainMenuLogo.zh-Hant.png'
+$logoPath = Join-Path $repoRoot $logoRelativePath
+$logoBytes = [System.IO.File]::ReadAllBytes($logoPath)
+$pngSignature = [byte[]](137, 80, 78, 71, 13, 10, 26, 10)
+if ($logoBytes.Length -lt 26) {
+    throw "Main-menu logo is too short to be a valid PNG: $logoRelativePath"
+}
+for ($i = 0; $i -lt $pngSignature.Length; $i++) {
+    if ($logoBytes[$i] -ne $pngSignature[$i]) {
+        throw "Main-menu logo is not a valid PNG: $logoRelativePath"
+    }
+}
+function Read-BigEndianUInt32([byte[]]$bytes, [int]$offset) {
+    return [uint32](
+        ([uint32]$bytes[$offset] -shl 24) -bor
+        ([uint32]$bytes[$offset + 1] -shl 16) -bor
+        ([uint32]$bytes[$offset + 2] -shl 8) -bor
+        [uint32]$bytes[$offset + 3]
+    )
+}
+$logoWidth = Read-BigEndianUInt32 $logoBytes 16
+$logoHeight = Read-BigEndianUInt32 $logoBytes 20
+$logoBitDepth = [int]$logoBytes[24]
+$logoColorType = [int]$logoBytes[25]
+if ($logoWidth -ne 2172 -or $logoHeight -ne 724) {
+    throw "Main-menu logo dimensions must be 2172x724; actual $($logoWidth)x$($logoHeight)."
+}
+if ($logoBitDepth -ne 8 -or $logoColorType -ne 6) {
+    throw "Main-menu logo must be 8-bit RGBA PNG; actual bitDepth=$logoBitDepth colorType=$logoColorType."
+}
+
+$embeddedLogo = @(
+    $projectXml.SelectNodes('/Project/ItemGroup/EmbeddedResource') |
+        Where-Object { [string]$_.Include -eq '../../assets/MainMenuLogo.zh-Hant.png' }
+)
+if ($embeddedLogo.Count -ne 1) {
+    throw 'Localization.csproj must embed assets/MainMenuLogo.zh-Hant.png exactly once.'
+}
+if ([string]$embeddedLogo[0].LogicalName -ne 'Combolands.Localization.Assets.MainMenuLogo.zh-Hant.png') {
+    throw 'Embedded main-menu logo LogicalName is missing or changed.'
+}
+if ([string]$embeddedLogo[0].WithCulture -ne 'false') {
+    throw 'Embedded main-menu logo must set WithCulture=false so zh-Hant does not become a satellite assembly.'
 }
 
 $pluginPath = Join-Path $repoRoot 'src/Localization/Plugin.cs'
@@ -149,6 +200,15 @@ if (-not $pluginVersionMatch.Success) {
 $pluginVersion = $pluginVersionMatch.Groups[1].Value
 if ($pluginVersion -ne $version) {
     throw "PluginVersion '$pluginVersion' does not match project Version '$version'."
+}
+
+$logoOverridePath = Join-Path $repoRoot 'src/Localization/MainMenuLogoOverride.cs'
+$logoOverrideText = Get-Content -LiteralPath $logoOverridePath -Raw
+if (-not $logoOverrideText.Contains('if (LocalizationState.IsChinese)')) {
+    throw 'Main-menu logo policy must apply the localized logo to both TraditionalChinese and SimplifiedChinese.'
+}
+if ($logoOverrideText.Contains('LocalizationState.IsTraditionalChinese')) {
+    throw 'Main-menu logo policy must not be restricted to TraditionalChinese only.'
 }
 
 $catalogPath = Join-Path $repoRoot 'localization/zh-Hant.json'

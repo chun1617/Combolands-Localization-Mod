@@ -10,7 +10,11 @@ namespace UnityEngine.UI
         public void SetAllDirty() { }
     }
 
-    public class Image : Graphic { }
+    public class Image : Graphic
+    {
+        public Sprite sprite { get; set; }
+        public bool preserveAspect { get; set; }
+    }
 
     public struct Navigation
     {

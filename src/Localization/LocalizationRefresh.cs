@@ -71,6 +71,7 @@ namespace Combolands.Localization
             }
 
             SettingsMenuPatch.RefreshInjectedLabels();
+            MainMenuLogoOverride.Refresh();
         }
 
         private static void EnsureConfigured()

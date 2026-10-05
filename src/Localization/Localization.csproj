@@ -5,7 +5,7 @@
     <Nullable>disable</Nullable>
     <AssemblyName>Localization</AssemblyName>
     <RootNamespace>Combolands.Localization</RootNamespace>
-    <Version>0.3.0</Version>
+    <Version>0.4.0</Version>
     <Deterministic>true</Deterministic>
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     <CombolandsManagedDir Condition="'$(CombolandsManagedDir)' == ''">$(COMBOLANDS_MANAGED_DIR)</CombolandsManagedDir>
@@ -22,6 +22,7 @@
     <ProjectReference Include="../../reference-stubs/Unity.TextMeshPro/Unity.TextMeshPro.csproj" Private="false" />
     <ProjectReference Include="../../reference-stubs/UnityEngine/UnityEngine.csproj" Private="false" />
     <ProjectReference Include="../../reference-stubs/UnityEngine.CoreModule/UnityEngine.CoreModule.csproj" Private="false" />
+    <ProjectReference Include="../../reference-stubs/UnityEngine.ImageConversionModule/UnityEngine.ImageConversionModule.csproj" Private="false" />
     <ProjectReference Include="../../reference-stubs/UnityEngine.TextCoreFontEngineModule/UnityEngine.TextCoreFontEngineModule.csproj" Private="false" />
     <ProjectReference Include="../../reference-stubs/UnityEngine.UI/UnityEngine.UI.csproj" Private="false" />
     <ProjectReference Include="../../reference-stubs/UnityEngine.UIModule/UnityEngine.UIModule.csproj" Private="false" />
@@ -32,6 +33,7 @@
     <Reference Include="Unity.TextMeshPro" HintPath="$(CombolandsManagedDir)/Unity.TextMeshPro.dll" Private="false" />
     <Reference Include="UnityEngine" HintPath="$(CombolandsManagedDir)/UnityEngine.dll" Private="false" />
     <Reference Include="UnityEngine.CoreModule" HintPath="$(CombolandsManagedDir)/UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="UnityEngine.ImageConversionModule" HintPath="$(CombolandsManagedDir)/UnityEngine.ImageConversionModule.dll" Private="false" />
     <Reference Include="UnityEngine.TextRenderingModule" HintPath="$(CombolandsManagedDir)/UnityEngine.TextRenderingModule.dll" Private="false" />
     <Reference Include="UnityEngine.TextCoreFontEngineModule" HintPath="$(CombolandsManagedDir)/UnityEngine.TextCoreFontEngineModule.dll" Private="false" />
     <Reference Include="UnityEngine.TextCoreTextEngineModule" HintPath="$(CombolandsManagedDir)/UnityEngine.TextCoreTextEngineModule.dll" Private="false" />
@@ -43,6 +45,10 @@
 
   <ItemGroup>
     <None Include="../../localization/zh-Hant.json" Link="zh-Hant.json" CopyToOutputDirectory="PreserveNewest" />
+    <EmbeddedResource Include="../../assets/MainMenuLogo.zh-Hant.png">
+      <LogicalName>Combolands.Localization.Assets.MainMenuLogo.zh-Hant.png</LogicalName>
+      <WithCulture>false</WithCulture>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup Condition="'$(UseGameAssemblies)' == 'true'">
@@ -50,6 +56,7 @@
     <RequiredGameReference Include="$(CombolandsManagedDir)/Unity.TextMeshPro.dll" />
     <RequiredGameReference Include="$(CombolandsManagedDir)/UnityEngine.dll" />
     <RequiredGameReference Include="$(CombolandsManagedDir)/UnityEngine.CoreModule.dll" />
+    <RequiredGameReference Include="$(CombolandsManagedDir)/UnityEngine.ImageConversionModule.dll" />
     <RequiredGameReference Include="$(CombolandsManagedDir)/UnityEngine.TextRenderingModule.dll" />
     <RequiredGameReference Include="$(CombolandsManagedDir)/UnityEngine.TextCoreFontEngineModule.dll" />
     <RequiredGameReference Include="$(CombolandsManagedDir)/UnityEngine.TextCoreTextEngineModule.dll" />

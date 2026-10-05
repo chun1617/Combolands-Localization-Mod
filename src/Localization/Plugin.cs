@@ -11,7 +11,7 @@ namespace Combolands.Localization
     {
         public const string PluginGuid = "com.combolands.localization";
         public const string PluginName = "Localization";
-        public const string PluginVersion = "0.3.0";
+        public const string PluginVersion = "0.4.0";
 
         private Harmony _harmony;
 
@@ -31,6 +31,7 @@ namespace Combolands.Localization
                 CjkFontFallback.Initialize();
                 LocalizationRefresh.Configure(log);
                 SettingsMenuPatch.Configure(log);
+                MainMenuLogoOverride.Configure(log);
 
                 _harmony = new Harmony(PluginGuid);
                 _harmony.PatchAll();
